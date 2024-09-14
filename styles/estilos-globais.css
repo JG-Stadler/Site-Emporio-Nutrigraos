@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+body,html{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+:root{
+    --Verde-escuro: #474d3e;
+    --Verde:#646d56;
+    --Verde-claro: #a4bbac;
+    --Branco: #e1d9c9;
+    --Marrom: #8b4b30;
+    --Marrom-claro: #a96e50;
+}

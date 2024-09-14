@@ -1,0 +1,24 @@
+body{
+    background-color: var(--Marrom-claro);
+}
+.menu-principal{
+    background-color: var(--Verde);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.548);
+    color: var(--Branco);
+    padding: 30px 0;
+}
+#logo-nutrigraos{
+    width: 300px;
+}
+.nav-list{
+    list-style: none;
+    gap: 40px;
+    font-size: 15pt;
+}
+.nav-link{
+    transition: .5s;
+}
+.nav-link:hover{
+    text-shadow: 0 0 3px #fff;
+    transform: translateY(-3px);
+}
