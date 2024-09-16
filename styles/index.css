@@ -93,3 +93,39 @@ body{
         transform: translate(0);
     }
 }
+
+/* Seção de filtragem de pesquisa */
+.filtragem{
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.filtro-de-pesquisa{
+    display: flex;
+    flex-direction: column;
+}
+#ordenar,#categ{
+    background-color: var(--Verde);
+    color: #fff;
+}
+.filtro-de-pesquisa>label{
+    color: #fff;
+}
+.barra-de-pesquisa{
+    background-color: #ffff;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    height: fit-content;
+}
+#pesquisar{
+    border: none;
+}
+.lupa{
+    height: 30px;
+}
+#input-pesquisa{
+    background: none;
+    border: none;
+    font-weight: bolder;
+    outline: none;
+}

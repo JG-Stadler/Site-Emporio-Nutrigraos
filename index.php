@@ -27,6 +27,26 @@
             <div class="barra-do-menu" id="barra3"></div>
         </div>
     </header>
+    <section class="filtragem d-flex align-items-center">
+        <div class="filtro-de-pesquisa">
+            <label for="categ">Categoria</label>
+            <select name="categoria" id="categ">
+
+            </select>
+        </div>
+
+        <div class="filtro-de-pesquisa">
+            <label for="ordenar">Ordenar por</label>
+            <select name="ordenar" id="ordenar"></select>
+        </div>
+
+        <label for="input-pesquisa" class="barra-de-pesquisa d-flex align-items-center">
+            <input type="search" id="input-pesquisa" placeholder="Buscar">
+            <button id="pesquisar">
+                <img class="lupa" src="images/icone-lupa.png">
+            </button>
+        </label>
+    </section>
     <script src="js/script.js"></script>
 </body>
 </html>
