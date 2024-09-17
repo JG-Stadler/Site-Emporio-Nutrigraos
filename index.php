@@ -1,3 +1,10 @@
+<?php
+    include("conection.php");
+    $result_produtos = "SELECT * FROM produtos;"
+    $query = mysqli_query($mysqli, $result_produtos);
+    $row_produtos = mysqli_fetch_assoc($query);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
