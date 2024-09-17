@@ -28,16 +28,22 @@
         </div>
     </header>
     <section class="filtragem d-flex align-items-center">
-        <div class="filtro-de-pesquisa">
+        <div class="filtro-de-pesquisa d-flex flex-column">
             <label for="categ">Categoria</label>
             <select name="categoria" id="categ">
-
+                <option value="temperos">Temperos</option>
+                <option value="cha">Chás</option>
+                <option value="graos">Grãos</option>
+                <option value="doces">Doces</option>
             </select>
         </div>
 
-        <div class="filtro-de-pesquisa">
+        <div class="filtro-de-pesquisa d-flex flex-column">
             <label for="ordenar">Ordenar por</label>
-            <select name="ordenar" id="ordenar"></select>
+            <select name="ordenar" id="ordenar">
+                <option value="menor-v">Menor valor</option>
+                <option value="maior-v">Maior valor</option>
+            </select>
         </div>
 
         <label for="input-pesquisa" class="barra-de-pesquisa d-flex align-items-center">
@@ -47,6 +53,9 @@
             </button>
         </label>
     </section>
+
+    <div class="barra-separar-conteudo"></div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
