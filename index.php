@@ -1,10 +1,3 @@
-<?php
-    include("conection.php");
-    $result_produtos = "SELECT * FROM produtos;"
-    $query = mysqli_query($mysqli, $result_produtos);
-    $row_produtos = mysqli_fetch_assoc($query);
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -62,6 +55,31 @@
     </section>
 
     <div class="barra-separar-conteudo"></div>
+
+    <main class="produtos">
+        <?php
+            include('conection.php');
+            $sql = "SELECT * FROM produtos ORDER BY nome";
+            $result = $mysqli->query($sql);
+
+            // Verifica se a consulta retornou resultados
+            if ($result->num_rows > 0) {
+                // Percorre os resultados e exibe
+                while($row = $result->fetch_assoc()) {
+                    ?>
+                    <div class="produto">
+                        <img src="" alt="foto-produto">
+                        <h1 class="nome-produto"><?php echo $row['nome']?></h1>
+                        <p class="descri-produto"><?php echo $row['descri']?></p>
+                        <h2 class="valor">R$<?php echo $row['valor']?></h2>
+                    </div>
+                <?php
+                }
+            } else {
+                echo "Nenhum produto encontrado.";
+            }
+        ?>
+    </main>
 
     <script src="js/script.js"></script>
 </body>
