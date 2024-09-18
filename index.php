@@ -27,7 +27,7 @@
             <div class="barra-do-menu" id="barra3"></div>
         </div>
     </header>
-    <section class="filtragem d-flex align-items-center">
+    <section class="filtragem d-flex align-items-start">
         <div class="filtro-de-pesquisa d-flex flex-column">
             <label for="categ">Categoria</label>
             <select name="categoria" id="categ">
@@ -68,7 +68,9 @@
                 while($row = $result->fetch_assoc()) {
                     ?>
                     <div class="produto">
-                        <img src="" alt="foto-produto">
+                        <div class="foto-produto">
+                            <img src="" alt="foto-produto">
+                        </div>
                         <h1 class="nome-produto"><?php echo $row['nome']?></h1>
                         <p class="descri-produto"><?php echo $row['descri']?></p>
                         <h2 class="valor">R$<?php echo $row['valor']?></h2>

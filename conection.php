@@ -3,5 +3,5 @@
     $banco = "nutrigraos";
     $usuario = "root";
     $senha = "";
-    $mysqli = new mysqli($hostName,$banco,$usuario,$senha)
+    $mysqli = new mysqli($hostName,$usuario,$senha,$banco)
 ?>
