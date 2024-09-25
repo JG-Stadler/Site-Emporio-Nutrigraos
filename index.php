@@ -57,7 +57,7 @@
     
     <div class="barra-separar-conteudo"></div>
 
-    <main class="produtos">
+    <main class="produtos" id="container-produtos">
         <?php
             include('conection.php');
             $sql = "SELECT * FROM produtos ORDER BY nome";
@@ -70,7 +70,7 @@
                     ?>
                     <div class="produto">
                         <div class="foto-produto">
-                            <img src="" alt="foto-produto">
+                            <img src="" alt="foto do produto">
                         </div>
                         <h1 class="nome-produto"><?php echo $row['nome']?></h1>
                         <p class="descri-produto"><?php echo $row['descri']?></p>

@@ -31,5 +31,7 @@
         </label>
     </section>
     <div class="barra-separar-conteudo"></div>
+    <main class="lista-produtos">
+    </main>
 </body>
 </html>
