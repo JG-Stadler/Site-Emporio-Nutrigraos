@@ -26,3 +26,21 @@ botaoPesquisar.addEventListener("click",()=>{
         }
     }
 });
+
+// Filtro de categoria
+
+const SelectCategoria = document.getElementById("categ");
+SelectCategoria.addEventListener("change",()=>{
+    const categoriaSelecionada = SelectCategoria.value;
+    const produtos = containerProdutos.getElementsByClassName('produto');
+    for(let i=0; i<produtos.length;i++){
+        if(categoriaSelecionada === "todas"){
+            produtos[i].style.display = "";    
+        }
+        else if(produtos[i].classList === categoriaSelecionada){
+            produtos[i].style.display = "";
+        }else{
+            produtos[i].style.display = "none";
+        }
+    }
+});

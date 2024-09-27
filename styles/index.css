@@ -96,9 +96,14 @@ body{
 }
 
 /* Seção de filtragem de pesquisa */
-.filtragem{
-    justify-content: space-around;
+.filtragem-pesquisa{
+    justify-content: space-between;
     padding: 20px 0;
+    width: 90vw;
+    margin: 0 auto;
+}
+.filtros{
+    gap: 10px;
 }
 #ordenar,#categ{
     background-color: var(--Verde);
@@ -114,16 +119,9 @@ body{
     color: #fff;
     text-shadow: 0 0 5px black;
 }
-.select-button{
-    background-color: var(--Verde-escuro);
-    color: var(--Branco);
-    width: fit-content;
-    transform: rotate(90deg);
-    text-align: center;
-    height: 100%;
-    font-weight: bolder;
-    padding: 0 12px;
-}
+/* .ordem{
+    justify-self: flex-start;
+} */
 .barra-de-pesquisa{
     background-color: #ffff;
     width: fit-content;
