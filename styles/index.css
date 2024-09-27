@@ -177,9 +177,15 @@ body{
     font-weight: bolder;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.594);
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
+    transition: .5s;
+    cursor: pointer;
+}
+.produto:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px var(--Verde-claro);
 }
 .produto>.foto-produto{
-    background-color: var(--Branco); 
+    background-color: #ffff; 
     width: 200px;
     height: 200px;
     overflow: hidden;
@@ -188,10 +194,8 @@ body{
     max-width: 90%;
 }
 .produto>img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    width: 200px;
+    height: 200px;
 }
 .nome-produto{
     /* font-size: x-large; */

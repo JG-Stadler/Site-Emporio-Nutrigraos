@@ -1,8 +1,13 @@
+.filtros{
+    align-self: flex-start;
+    flex-direction: column;
+}
+@media(max-width:600px){
 .filtragem-pesquisa{
     flex-direction: column;
 }
-.filtros{
-    align-self: flex-start;
+#input-pesquisa{
+    width: 80vw;
 }
 .barra-de-pesquisa{
     grid-row: 2;
@@ -10,6 +15,4 @@
     width: 90vw;
     margin: 20px auto;
 }
-#input-pesquisa{
-    width: 80vw;
 }

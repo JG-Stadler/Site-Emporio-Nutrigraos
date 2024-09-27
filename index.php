@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/estilos-globais.css">
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" media="(max-width:600px)" href="styles/adaptar-tela-index.css">
+    <link rel="stylesheet" media="(max-width:700px)" href="styles/adaptar-tela-index.css">
     <title>Nutrigrãos</title>
 </head>
 <body>
