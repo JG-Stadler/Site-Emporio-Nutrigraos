@@ -33,11 +33,14 @@ const SelectCategoria = document.getElementById("categ");
 SelectCategoria.addEventListener("change",()=>{
     const categoriaSelecionada = SelectCategoria.value;
     const produtos = containerProdutos.getElementsByClassName('produto');
+    let ClasseProduto;
+    console.log("categoria selecionada")
     for(let i=0; i<produtos.length;i++){
+        IdProduto = produtos[i].id;
         if(categoriaSelecionada === "todas"){
             produtos[i].style.display = "";    
         }
-        else if(produtos[i].classList === categoriaSelecionada){
+        else if(IdProduto === categoriaSelecionada){
             produtos[i].style.display = "";
         }else{
             produtos[i].style.display = "none";
