@@ -33,7 +33,7 @@ const SelectCategoria = document.getElementById("categ");
 SelectCategoria.addEventListener("change",()=>{
     const categoriaSelecionada = SelectCategoria.value;
     const produtos = containerProdutos.getElementsByClassName('produto');
-    let ClasseProduto;
+    let IdProduto;
     console.log("categoria selecionada")
     for(let i=0; i<produtos.length;i++){
         IdProduto = produtos[i].id;
@@ -46,4 +46,14 @@ SelectCategoria.addEventListener("change",()=>{
             produtos[i].style.display = "none";
         }
     }
+});
+
+// Ordenar por valor
+
+const SelectOrdem = document.getElementById("ordenar");
+SelectOrdem.addEventListener("change",()=>{
+    const OrdemSelecionada = SelectOrdem.value;
+    const produtos = containerProdutos.getElementsByClassName('produto'); 
+    const valores = containerProdutos.getElementsByClassName("valor"); 
+    console.log(valores[1].innerText.replace('R$',""))
 });

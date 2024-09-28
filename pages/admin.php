@@ -18,7 +18,7 @@
     </header>
     <section class="boas-vindas">
         <h1>Olá usuário</h1>
-        <p>Aqui está a listagem de produtos da loja:</p>
+        <p class="m-0">Aqui está a listagem de produtos da loja:</p>
     </section>
     <section class="controles d-flex align-items-center justify-content-around">
         <button class="add-prod btn">Adicionar produto</button>
@@ -32,6 +32,16 @@
     </section>
     <div class="barra-separar-conteudo"></div>
     <main class="lista-produtos">
+        <div class="produto">
+            <img src="../images/background-rodape.jpg" alt="ft-produto" class="foto-prod">
+            <p class="nome m-0">nome do Produto</p>
+            <p class="descri m-0">Descrição do produto</p>
+            <p class="valor m-0">R$00.00</p>
+
+            <button id="editar-produto" class="btn p-0">
+                <img src="../images/icone-lapis.png" alt="editar produto">
+            </button>
+        </div>
     </main>
 </body>
 </html>

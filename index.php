@@ -62,7 +62,7 @@
 
     <main class="produtos" id="container-produtos">
         <?php
-            include('conection.php');
+            include_once('conection.php');
             $sql = "SELECT * FROM produtos ORDER BY nome";
             $result = $mysqli->query($sql);
 
