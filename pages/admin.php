@@ -32,16 +32,28 @@
     </section>
     <div class="barra-separar-conteudo"></div>
     <main class="lista-produtos">
-        <div class="produto">
-            <img src="../images/background-rodape.jpg" alt="ft-produto" class="foto-prod">
-            <p class="nome m-0">nome do Produto</p>
-            <p class="descri m-0">Descrição do produto</p>
-            <p class="valor m-0">R$00.00</p>
+    <?php
+        include_once('../conection.php');
+        $sql = "SELECT * FROM produtos ORDER BY nome";
+        $result = $mysqli -> query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){?>
+            <div class="produto" id="<?php echo $row["cod_produto"]?>">
+                <img src="<?php echo $row["url_imagem"]?>" alt="ft-produto" class="foto-prod">
+                <p class="nome m-0"><?php echo $row["nome"]?></p>
+                <p class="descri m-0"><?php echo $row["descri"]?></p>
+                <p class="valor m-0">R$<?php echo $row["valor"]?></p>
 
-            <button id="editar-produto" class="btn p-0">
-                <img src="../images/icone-lapis.png" alt="editar produto">
-            </button>
-        </div>
+                <button id="editar-produto" class="btn p-0">
+                    <img src="../images/icone-lapis.png" alt="editar produto">
+                </button>
+            </div>
+        <?php }
+        }else{
+            echo "Não há produtos no banco de dados";
+        }
+    ?>
+
     </main>
 </body>
 </html>
