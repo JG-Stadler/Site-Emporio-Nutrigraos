@@ -45,7 +45,11 @@
                 <p class="valor m-0">R$<?php echo $row["valor"]?></p>
 
                 <button id="editar-produto" class="btn p-0">
-                    <img src="../images/icone-lapis.png" alt="editar produto">
+                    <img src="../images/icone-lapis.png" alt="editar produto"  title="Editar Produto">
+                </button>
+                
+                <button id="excluir-produto" class="btn p-0">
+                    <img src="../images/icone-lixeira.png" alt="Excluir produto" title="Excluir Produto"/>
                 </button>
             </div>
         <?php }
@@ -53,7 +57,19 @@
             echo "Não há produtos no banco de dados";
         }
     ?>
-
     </main>
+    <form action="addProd.php" id="novo-produto" class="d-flex flex-column">
+        <h1>Adicionar um novo produto</h1>
+        <label for="nome-novo-produto">Nome:</label>
+        <input type="text" name="nome-novo-produto" id="nome-novo-produto">
+        <label for="descri-novo-produto">Descrição:</label>
+        <textarea name="descri-novo-produto" id="descri-novo-produto"></textarea>
+        <label for="">Valor:</label>
+        <input type="number" name="valor-novo-produto" id="valor-novo-produto">
+        <label for="ategoria-novo-produto">Categoria:</label>
+        <select name="categoria-novo-produto" id="categoria-novo-produto">
+            <option value="graos">Grãos</option>
+        </select>
+    </form>
 </body>
 </html>
