@@ -21,7 +21,8 @@
         <p class="m-0">Aqui está a listagem de produtos da loja:</p>
     </section>
     <section class="controles d-flex align-items-center justify-content-around">
-        <button class="add-prod btn">Adicionar produto</button>
+        <button class="add-prod btn"
+        onclick="AbrirFurmularioProd()">Adicionar produto</button>
         <button class="add-categ btn">Adicionar categoria</button>
         <label for="input-pesquisa" class="barra-de-pesquisa d-flex align-items-center">
             <input type="search" id="input-pesquisa" placeholder="Buscar">
@@ -58,18 +59,21 @@
         }
     ?>
     </main>
-    <form action="addProd.php" id="novo-produto" class="d-flex flex-column">
+    <form action="addProd.php" id="novo-produto" class="flex-column">
+        <span class="align-self-end" onclick="CloseFormProd()">X</span>
         <h1>Adicionar um novo produto</h1>
         <label for="nome-novo-produto">Nome:</label>
-        <input type="text" name="nome-novo-produto" id="nome-novo-produto">
+        <input type="text" name="nome-novo-produto" id="nome-novo-produto" required>
         <label for="descri-novo-produto">Descrição:</label>
         <textarea name="descri-novo-produto" id="descri-novo-produto"></textarea>
         <label for="">Valor:</label>
-        <input type="number" name="valor-novo-produto" id="valor-novo-produto">
+        <input type="number" name="valor-novo-produto" id="valor-novo-produto" required>
         <label for="ategoria-novo-produto">Categoria:</label>
         <select name="categoria-novo-produto" id="categoria-novo-produto">
             <option value="graos">Grãos</option>
         </select>
+        <input type="submit" value="Adicionar" class="add-prod-btn">
     </form>
+    <script src="../js/script-admin.js"></script>
 </body>
 </html>
