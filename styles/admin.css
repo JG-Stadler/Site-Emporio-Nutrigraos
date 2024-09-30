@@ -96,8 +96,8 @@
 #editar-produto>img,#excluir-produto>img{
     width: 30px;
 }
-/* Formulário de criação dos produtos */
-#novo-produto{
+/* Formulários de criação dos produtos e categorias*/
+#novo-produto,#nova-categoria{
     position: fixed;
     left: 50%;
     top: 50%;
@@ -117,13 +117,13 @@
     font-size: x-large;
 }
 #novo-produto input,#novo-produto textarea
-,#novo-produto select{
+,#novo-produto select, #nova-categoria input{
     border-radius: 5px;
     border: solid 1px var(--Verde-escuro);
     background-color: var(--Branco);
     padding: 5px 10px;
 }
-.add-prod-btn{
+.add-prod-btn,.add-categ-btn{
     width: fit-content;
     padding: 10px 20px;
     color: #ffff;
@@ -135,12 +135,12 @@
     align-self: center;
     transition: .3s;
 }
-.add-prod-btn:hover{
+.add-prod-btn:hover,.add-categ-btn:hover{
     color: var(--Verde-escuro);
     background-color: #ffff !important;
     border: solid 2px var(--Verde-escuro)!important;
 }
-#novo-produto span{
+#novo-produto span,#nova-categoria span{
     cursor: pointer;
     font-size: x-large;
 }

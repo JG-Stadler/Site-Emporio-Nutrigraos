@@ -23,7 +23,8 @@
     <section class="controles d-flex align-items-center justify-content-around">
         <button class="add-prod btn"
         onclick="AbrirFurmularioProd()">Adicionar produto</button>
-        <button class="add-categ btn">Adicionar categoria</button>
+        <button class="add-categ btn"
+        onclick="AbrirFurmularioCateg()">Adicionar categoria</button>
         <label for="input-pesquisa" class="barra-de-pesquisa d-flex align-items-center">
             <input type="search" id="input-pesquisa" placeholder="Buscar">
             <button id="pesquisar">
@@ -73,6 +74,13 @@
             <option value="graos">Grãos</option>
         </select>
         <input type="submit" value="Adicionar" class="add-prod-btn">
+    </form>
+
+    <form action="addCateg.php" id="nova-categoria" class="flex-column">
+        <span class="align-self-end" onclick="CloseFormCateg()">X</span>
+        <label for="nome-categoria">Nome da categoria</label>
+        <input type="text" id="nome-categoria" name="nome-categoria" required>
+        <input type="submit" value="Adicionar" class="add-categ-btn">
     </form>
     <script src="../js/script-admin.js"></script>
 </body>
