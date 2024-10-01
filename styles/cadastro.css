@@ -1,0 +1,55 @@
+/* Janela de sucesso no cadastro da categoria */
+
+body{
+    display: grid;
+    place-content: center;
+    background-color: var(--Verde-claro);
+    background-image: url(../images/background-rodape.jpg);
+    background-position: right bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cadastro-feito{
+    text-align: center;
+    color: var(--Branco);
+    background-color: var(--Verde);
+    max-width: 80vw;
+    padding: 20px 15px;
+    border-radius: 15px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.555);
+}
+.cadastro-feito h2, .erro-cadastro p{
+    margin-bottom: 20px;
+}
+.cadastro-feito a{
+    padding: 5px 10px ;
+    border-radius: 10px ;
+    background-color: var(--Verde-escuro);
+    color: var(--Branco);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bolder;
+    border: solid 2px var(--Branco);
+}
+
+/* Janela de erro no cadastro da categoria */
+
+.erro-cadastro{
+    text-align: center;
+    color: var(--Branco);
+    background-color: rgb(114, 0, 0);
+    max-width: 80vw;
+    padding: 20px 15px;
+    border-radius: 15px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.555);
+}
+.erro-cadastro a{
+    padding: 5px 10px ;
+    border-radius: 10px ;
+    background-color: var(--Branco);
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bolder;
+    text-shadow: none;
+}

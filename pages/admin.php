@@ -60,7 +60,7 @@
         }
     ?>
     </main>
-    <form action="addProd.php" id="novo-produto" class="flex-column">
+    <form method="get" action="../addProd.php" id="novo-produto" class="flex-column">
         <span class="align-self-end" onclick="CloseFormProd()">X</span>
         <h1>Adicionar um novo produto</h1>
         <label for="nome-novo-produto">Nome:</label>
@@ -76,7 +76,7 @@
         <input type="submit" value="Adicionar" class="add-prod-btn">
     </form>
 
-    <form action="addCateg.php" id="nova-categoria" class="flex-column">
+    <form method="get" action="../addCateg.php" id="nova-categoria" class="flex-column">
         <span class="align-self-end" onclick="CloseFormCateg()">X</span>
         <label for="nome-categoria">Nome da categoria</label>
         <input type="text" id="nome-categoria" name="nome-categoria" required>
