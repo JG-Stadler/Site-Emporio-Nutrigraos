@@ -60,7 +60,8 @@
         }
     ?>
     </main>
-    <form method="get" action="../addProd.php" id="novo-produto" class="flex-column">
+    <form method="post" action="../addProd.php" id="novo-produto"
+    class="flex-column" enctype="multipart/form-data">
         <span class="align-self-end" onclick="CloseFormProd()">X</span>
         <h1>Adicionar um novo produto</h1>
         <label for="nome-novo-produto">Nome:</label>
@@ -71,8 +72,23 @@
         <input type="number" name="valor-novo-produto" id="valor-novo-produto" required>
         <label for="ategoria-novo-produto">Categoria:</label>
         <select name="categoria-novo-produto" id="categoria-novo-produto">
-            <option value="graos">Grãos</option>
+        <?php
+            $sql = "SELECT nome_categ FROM categoria";
+            $result = $mysqli->query($sql);
+            // Gerar dinamicamente as opções do select
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo '<option value="' . $row['nome_categ'] . '">' . $row['nome_categ'] . '</option>';
+                }
+            } else {
+                echo '<option value="">Nenhuma categoria encontrada</option>';
+            }
+        ?>
         </select>
+        <label for="foto-novo-produto">Foto do Produto:</label>
+        <input type="file" name="foto-novo-produto" id="foto-novo-produto" accept="image/*" required>
+    
+
         <input type="submit" value="Adicionar" class="add-prod-btn">
     </form>
 
