@@ -86,7 +86,7 @@
         ?>
         </select>
         <label for="foto-novo-produto">Foto do Produto:</label>
-        <input type="file" name="foto-novo-produto" id="foto-novo-produto" accept="image/*" required>
+        <input type="file" name="foto-novo-produto" id="foto-novo-produto" accept="image/*">
     
 
         <input type="submit" value="Adicionar" class="add-prod-btn">
