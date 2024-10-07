@@ -105,8 +105,8 @@
         <button onclick="FecharJanelaDeExclusao()">Não</button>
     </div>
 
-    <form action="../excluir-produto.php" class="excluir" id="excluir">
-        <input type="number" id="idExcluir">
+    <form action="../excluir-produto.php" class="excluir" id="excluir" method="post">
+        <input type="number" id="idExcluir" name="idExcluir">
         <input type="submit" id="solicitarExclusao">
     </form>
     <script src="../js/script-admin.js"></script>
