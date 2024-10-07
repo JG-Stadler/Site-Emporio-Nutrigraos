@@ -46,7 +46,7 @@
                 <p class="descri m-0"><?php echo $row["descri"]?></p>
                 <p class="valor m-0">R$<?php echo $row["valor"]?></p>
 
-                <button id="editar-produto" class="btn p-0">
+                <button id="editar-produto" class="btn p-0" onclick="JanelaDeEdicao(this)">
                     <img src="../images/icone-lapis.png" alt="editar produto"  title="Editar Produto">
                 </button>
                 
@@ -108,6 +108,39 @@
     <form action="../excluir-produto.php" class="excluir" id="excluir" method="post">
         <input type="number" id="idExcluir" name="idExcluir">
         <input type="submit" id="solicitarExclusao">
+    </form>
+
+    <form method="post" action="../EditProd.php" id="editar-produto-form"
+    class="flex-column" enctype="multipart/form-data">
+        <span class="align-self-end" onclick="FecharJanelaDeEdicao()">X</span>
+        <h1 class="align-self-center">Editar produto</h1>
+        <input type="number" name="idProdutoEdit" id="IdProdutoEdit">
+        <label for="novo-nome-produto">Nome:</label>
+        <input type="text" name="novo-nome-produto" id="novo-nome-produto" required>
+        <label for="nova-descri-produto">Descrição:</label>
+        <textarea name="nova-descri-produto" id="nova-descri-produto"></textarea>
+        <label for="">Valor:</label>
+        <input type="number" name="novo-valor-produto" id="novo-valor-produto" required>
+        <label for="categoria-novo-produto">Categoria:</label>
+        <select name="categoria-novo-produto" id="categoria-novo-produto">
+        <?php
+            $sql = "SELECT nome_categ FROM categoria";
+            $result = $mysqli->query($sql);
+            // Gerar dinamicamente as opções do select
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo '<option value="' . $row['nome_categ'] . '">' . $row['nome_categ'] . '</option>';
+                }
+            } else {
+                echo '<option value="">Nenhuma categoria encontrada</option>';
+            }
+        ?>
+        </select>
+        <label for="foto-novo-produto">Foto do Produto:</label>
+        <input type="file" name="nova-foto-produto" id="nova-foto-produto" accept="image/*">
+    
+
+        <input type="submit" value="Salvar Alterações" class="edit-prod-btn">
     </form>
     <script src="../js/script-admin.js"></script>
 </body>
