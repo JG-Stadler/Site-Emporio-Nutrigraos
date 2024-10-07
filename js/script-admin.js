@@ -15,3 +15,13 @@ function AbrirFurmularioCateg(){
 function CloseFormCateg(){
     formCriarCategoria.style.display = "none";
 }
+
+// Exclusão de produtos
+let idProdutoExcluido;
+function JanelaDeExclusao(bottunElement){
+    document.querySelector('.excluir-produto').style.display = "block";
+    idProdutoExcluido = bottunElement.parentElement.id;
+}
+function FecharJanelaDeExclusao(){
+    document.querySelector('.excluir-produto').style.display = "none";    
+}

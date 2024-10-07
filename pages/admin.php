@@ -50,7 +50,7 @@
                     <img src="../images/icone-lapis.png" alt="editar produto"  title="Editar Produto">
                 </button>
                 
-                <button id="excluir-produto" class="btn p-0">
+                <button id="excluir-produto" class="btn p-0" onclick="JanelaDeExclusao(this)">
                     <img src="../images/icone-lixeira.png" alt="Excluir produto" title="Excluir Produto"/>
                 </button>
             </div>
@@ -98,6 +98,12 @@
         <input type="text" id="nome-categoria" name="nome-categoria" required>
         <input type="submit" value="Adicionar" class="add-categ-btn">
     </form>
+
+    <div class="excluir-produto">
+        <h1>Tem certeza que deseja excluir esse produto?</h1>
+        <button>Sim</button>
+        <button onclick="FecharJanelaDeExclusao()">Não</button>
+    </div>
     <script src="../js/script-admin.js"></script>
 </body>
 </html>
