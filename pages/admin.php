@@ -101,9 +101,14 @@
 
     <div class="excluir-produto">
         <h1>Tem certeza que deseja excluir esse produto?</h1>
-        <button>Sim</button>
+        <button id="confirmarExclu">Sim</button>
         <button onclick="FecharJanelaDeExclusao()">Não</button>
     </div>
+
+    <form action="../excluir-produto.php" class="excluir" id="excluir">
+        <input type="number" id="idExcluir">
+        <input type="submit" id="solicitarExclusao">
+    </form>
     <script src="../js/script-admin.js"></script>
 </body>
 </html>

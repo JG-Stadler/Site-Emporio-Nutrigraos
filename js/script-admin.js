@@ -18,6 +18,7 @@ function CloseFormCateg(){
 
 // Exclusão de produtos
 let idProdutoExcluido;
+const confirmarExclusao = document.getElementById("confirmarExclu");
 function JanelaDeExclusao(bottunElement){
     document.querySelector('.excluir-produto').style.display = "block";
     idProdutoExcluido = bottunElement.parentElement.id;
@@ -25,3 +26,7 @@ function JanelaDeExclusao(bottunElement){
 function FecharJanelaDeExclusao(){
     document.querySelector('.excluir-produto').style.display = "none";    
 }
+confirmarExclusao.addEventListener('click',()=>{
+    document.getElementById('idExcluir').value = idProdutoExcluido;
+    document.getElementById('solicitarExclusao').click();
+});

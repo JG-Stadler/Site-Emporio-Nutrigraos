@@ -173,3 +173,8 @@
     text-transform: uppercase;
     border-radius: 10px;
 }
+.excluir{
+    opacity: 0;
+    position: fixed;
+    z-index: -3;
+}
