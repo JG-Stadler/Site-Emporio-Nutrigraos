@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/estilos-globais.css">
     <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" media="(max-width: 600px)" href="../styles/adaptar-tela-admin.css">
 
     <title>Admin nutrigãos</title>
 </head>
@@ -32,7 +33,6 @@
             </button>
         </label>
     </section>
-    <div class="barra-separar-conteudo"></div>
     <main class="lista-produtos">
     <?php
         include_once('../conection.php');
@@ -43,16 +43,19 @@
             <div class="produto" id="<?php echo $row["cod_produto"]?>">
                 <img src="<?php echo $row["url_imagem"]?>" alt="ft-produto" class="foto-prod">
                 <p class="nome m-0"><?php echo $row["nome"]?></p>
+                <p class="categ m-0"><?php echo $row["categoria"]?></p>
                 <p class="descri m-0"><?php echo $row["descri"]?></p>
                 <p class="valor m-0">R$<?php echo $row["valor"]?></p>
 
-                <button id="editar-produto" class="btn p-0" onclick="JanelaDeEdicao(this)">
-                    <img src="../images/icone-lapis.png" alt="editar produto"  title="Editar Produto">
-                </button>
-                
-                <button id="excluir-produto" class="btn p-0" onclick="JanelaDeExclusao(this)">
-                    <img src="../images/icone-lixeira.png" alt="Excluir produto" title="Excluir Produto"/>
-                </button>
+                <div class="controles-produto d-flex">
+                    <button id="editar-produto" class="btn p-0" onclick="JanelaDeEdicao(this)">
+                        <img src="../images/icone-lapis.png" alt="editar produto"  title="Editar Produto">
+                    </button>
+                    
+                    <button id="excluir-produto" class="btn p-0" onclick="JanelaDeExclusao(this)">
+                        <img src="../images/icone-lixeira.png" alt="Excluir produto" title="Excluir Produto"/>
+                    </button>
+                </div>
             </div>
         <?php }
         }else{
@@ -69,7 +72,7 @@
         <label for="descri-novo-produto">Descrição:</label>
         <textarea name="descri-novo-produto" id="descri-novo-produto"></textarea>
         <label for="">Valor:</label>
-        <input type="number" name="valor-novo-produto" id="valor-novo-produto" required>
+        <input type="number" step="0.01" name="valor-novo-produto" id="valor-novo-produto" required>
         <label for="ategoria-novo-produto">Categoria:</label>
         <select name="categoria-novo-produto" id="categoria-novo-produto">
         <?php
@@ -120,9 +123,9 @@
         <label for="nova-descri-produto">Descrição:</label>
         <textarea name="nova-descri-produto" id="nova-descri-produto"></textarea>
         <label for="">Valor:</label>
-        <input type="number" name="novo-valor-produto" id="novo-valor-produto" required>
+        <input type="number" step="0.01" name="novo-valor-produto" id="novo-valor-produto" required>
         <label for="categoria-novo-produto">Categoria:</label>
-        <select name="categoria-novo-produto" id="categoria-novo-produto">
+        <select name="nova-categoria-produto" id="nova-categoria-produto">
         <?php
             $sql = "SELECT nome_categ FROM categoria";
             $result = $mysqli->query($sql);
