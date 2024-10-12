@@ -53,14 +53,13 @@ function CarregarDadosAtuais(idProdutoEdit){
     const inputCategoria = document.getElementById("nova-categoria-produto");
 
     const produtoSelecionado = document.getElementById(idProdutoEdit);
-    console.log(produtoSelecionado)
 
     const NomeAtual = produtoSelecionado.getElementsByClassName("nome")[0].innerHTML;
     const descriAtual = produtoSelecionado.getElementsByClassName("descri")[0].innerHTML;
     const valorAtual = produtoSelecionado.getElementsByClassName("valor")[0].innerHTML.replace('R$',"");
-    // const categAtual = produtoSelecionado.getElementsByClassName("categ")[0].innerHTML;
+    const categAtual = produtoSelecionado.getElementsByClassName("categ")[0].innerHTML;
     inputNome.value = NomeAtual;
     inputDescri.value = descriAtual;
     inputValor.value = valorAtual;
-    // inputCategoria.value = categAtual;
+    inputCategoria.value = categAtual;
 }

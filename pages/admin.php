@@ -122,9 +122,9 @@
         <input type="text" name="novo-nome-produto" id="novo-nome-produto" required>
         <label for="nova-descri-produto">Descrição:</label>
         <textarea name="nova-descri-produto" id="nova-descri-produto"></textarea>
-        <label for="">Valor:</label>
+        <label for="novo-valor-produto">Valor:</label>
         <input type="number" step="0.01" name="novo-valor-produto" id="novo-valor-produto" required>
-        <label for="categoria-novo-produto">Categoria:</label>
+        <label for="nova-categoria-produto">Categoria:</label>
         <select name="nova-categoria-produto" id="nova-categoria-produto">
         <?php
             $sql = "SELECT nome_categ FROM categoria";
