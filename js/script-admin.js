@@ -20,8 +20,9 @@ function CloseFormCateg(){
 let idProdutoExcluido;
 const confirmarExclusao = document.getElementById("confirmarExclu");
 function JanelaDeExclusao(buttonElement){
+    const buttonParent = buttonElement.parentElement
     document.querySelector('.excluir-produto').style.display = "block";
-    idProdutoExcluido = buttonElement.parentElement.id;
+    idProdutoExcluido = buttonParent.parentElement.id;
 }
 function FecharJanelaDeExclusao(){
     document.querySelector('.excluir-produto').style.display = "none";    
