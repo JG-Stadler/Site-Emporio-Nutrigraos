@@ -34,10 +34,19 @@
                 <label for="categ">Categoria</label>
                 <select name="categoria" id="categ">
                     <option value="todas">Todas as categorias</option>
-                    <option value="temperos">Temperos</option>
-                    <option value="cha">Chás</option>
-                    <option value="graos">Grãos</option>
-                    <option value="doces">Doces</option>
+                    <?php
+                        include_once('conection.php');
+                        $sql = "SELECT nome_categ FROM categoria";
+                        $result = $mysqli->query($sql);
+                        // Gerar dinamicamente as opções do select
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo '<option value="' . $row['nome_categ'] . '">' . $row['nome_categ'] . '</option>';
+                            }
+                        } else {
+                            echo '<option value="">Nenhuma categoria encontrada</option>';
+                        }
+                    ?>
                 </select>
             </div>
             <div class="filtro-de-pesquisa d-flex flex-column ordem">
@@ -62,7 +71,6 @@
 
     <main class="produtos" id="container-produtos">
         <?php
-            include_once('conection.php');
             $sql = "SELECT * FROM produtos ORDER BY nome";
             $result = $mysqli->query($sql);
 
