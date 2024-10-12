@@ -33,7 +33,7 @@
             </button>
         </label>
     </section>
-    <main class="lista-produtos">
+    <main class="lista-produtos" id="lista-produtos">
     <?php
         include_once('../conection.php');
         $sql = "SELECT * FROM produtos ORDER BY nome";
@@ -42,7 +42,7 @@
             while($row = $result->fetch_assoc()){?>
             <div class="produto" id="<?php echo $row["cod_produto"]?>">
                 <img src="<?php echo $row["url_imagem"]?>" alt="ft-produto" class="foto-prod">
-                <p class="nome m-0"><?php echo $row["nome"]?></p>
+                <h1 class="nome m-0"><?php echo $row["nome"]?></h1>
                 <p class="categ m-0"><?php echo $row["categoria"]?></p>
                 <p class="descri m-0"><?php echo $row["descri"]?></p>
                 <p class="valor m-0">R$<?php echo $row["valor"]?></p>

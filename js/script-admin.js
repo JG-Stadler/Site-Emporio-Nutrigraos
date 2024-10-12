@@ -63,3 +63,26 @@ function CarregarDadosAtuais(idProdutoEdit){
     inputValor.value = valorAtual;
     inputCategoria.value = categAtual;
 }
+// Barra de pesquisa
+const inputPesquisa = document.getElementById("input-pesquisa");
+const containerProdutos = document.getElementById("lista-produtos");
+const BotaoDePesquisa = document.getElementById("pesquisar");
+
+BotaoDePesquisa.addEventListener('click',()=> Pesquisar());
+inputPesquisa.addEventListener('change',()=> Pesquisar());
+
+function Pesquisar(){
+    console.log(inputPesquisa)
+    const produtos = containerProdutos.getElementsByClassName("produto");
+    const pesquisa = inputPesquisa.value.toLowerCase(); 
+
+    for (let i = 0; i < produtos.length; i++) {
+        let itemTitle = produtos[i].getElementsByTagName('h1')[0].innerText.toLowerCase();
+        console.log(itemTitle)
+        if (itemTitle.includes(pesquisa)) {
+            produtos[i].style.display = '';
+        } else {
+            produtos[i].style.display = 'none';
+        }
+    }
+}

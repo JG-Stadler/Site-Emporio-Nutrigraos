@@ -84,6 +84,7 @@
 }
 .nome{
     font-weight: bolder;
+    font-size: 13px;
     text-transform: uppercase;
     grid-row: 1;
 }

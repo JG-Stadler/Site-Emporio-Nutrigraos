@@ -13,7 +13,10 @@ const inputPesquisa = document.getElementById("input-pesquisa");
 const botaoPesquisar = document.getElementById("pesquisar");
 const containerProdutos = document.getElementById("container-produtos");
 
-botaoPesquisar.addEventListener("click",()=>{
+inputPesquisa.addEventListener('change',()=>Pesquisar());
+botaoPesquisar.addEventListener("click",()=>Pesquisar());
+
+function Pesquisar(){
     const produtos = containerProdutos.getElementsByClassName("produto");
     const pesquisa = inputPesquisa.value.toLowerCase(); 
 
@@ -25,7 +28,7 @@ botaoPesquisar.addEventListener("click",()=>{
             produtos[i].style.display = 'none';
         }
     }
-});
+}
 
 // Filtro de categoria
 
