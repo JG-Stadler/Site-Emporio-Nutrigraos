@@ -113,7 +113,7 @@
         <input type="submit" id="solicitarExclusao">
     </form>
 
-    <form method="post" action="../EditProd.php" id="editar-produto-form"
+    <form method="post" action="../editProd.php" id="editar-produto-form"
     class="flex-column" enctype="multipart/form-data">
         <span class="align-self-end" onclick="FecharJanelaDeEdicao()">X</span>
         <h1 class="align-self-center">Editar produto</h1>
