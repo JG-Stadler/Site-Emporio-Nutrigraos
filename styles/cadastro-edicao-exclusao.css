@@ -56,7 +56,7 @@ body{
 
 /* Exclusão dos produtos */
 
-.produto-excluido, .erro-excluir{
+.excluido , .erro-excluir{
     text-align: center;
     color: var(--Branco);
     background-color: var(--Verde);
@@ -65,7 +65,7 @@ body{
     border-radius: 15px;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.555); 
 }
-.produto-excluido a, .erro-excluir a{
+.excluido a, .erro-excluir a{
     padding: 5px 10px ;
     border-radius: 10px ;
     background-color: var(--Verde-escuro);
@@ -75,6 +75,6 @@ body{
     font-weight: bolder;
     border: solid 2px var(--Branco);
 }
-.produto-excluido h2,.erro-excluir p{
+.excluido h2,.erro-excluir p{
     margin-bottom: 20px;
 }

@@ -26,6 +26,29 @@
         onclick="AbrirFurmularioProd()">Adicionar produto</button>
         <button class="add-categ btn"
         onclick="AbrirFurmularioCateg()">Adicionar categoria</button>
+
+        <section class="controle-de-categorias">
+        <button id="mostrar-categorias" class="btn">Ver Categorias</button>
+        <div class="vizualizar-categ">
+            <?php
+                include('../conection.php');
+                $sqlCateg = "SELECT nome_categ FROM categoria;";
+                $res = $mysqli -> query($sqlCateg);
+                if($res->num_rows > 0){
+                    if ($res->num_rows > 0) {
+                        while($row = $res->fetch_assoc()) {
+                            echo '<div class="op_categoria d-flex align-items-center"><p class="m-0">' . $row["nome_categ"] . '</p>
+                            <img src="../images/icone-lixeira.png" onclick="DeletarCateg(this)"/>
+                            </div>';
+                        }
+                    } else {
+                        echo '<option value="">Nenhuma categoria encontrada</option>';
+                    }
+                }
+                ?>
+            </div>
+        </section>
+
         <label for="input-pesquisa" class="barra-de-pesquisa d-flex align-items-center">
             <input type="search" id="input-pesquisa" placeholder="Buscar">
             <button id="pesquisar">
@@ -33,9 +56,10 @@
             </button>
         </label>
     </section>
+
+
     <main class="lista-produtos" id="lista-produtos">
     <?php
-        include_once('../conection.php');
         $sql = "SELECT * FROM produtos ORDER BY nome";
         $result = $mysqli -> query($sql);
         if($result->num_rows > 0){
@@ -108,9 +132,14 @@
         <button onclick="FecharJanelaDeExclusao()">Não</button>
     </div>
 
-    <form action="../excluir-produto.php" class="excluir" id="excluir" method="post">
+    <form action="../excluir-produto.php" class="excluir-prod-form" id="excluir-prod-form" method="post">
         <input type="number" id="idExcluir" name="idExcluir">
         <input type="submit" id="solicitarExclusao">
+    </form>
+    <form action="../excluir-categoria.php" class="excluir-categ-form"
+    method="post" id="excluir-categ-form">
+        <input type="text" id="nome-categ-excluir" name="nome-categ-excluir">
+        <input type="submit" id="solicitar-exclusao">
     </form>
 
     <form method="post" action="../editProd.php" id="editar-produto-form"

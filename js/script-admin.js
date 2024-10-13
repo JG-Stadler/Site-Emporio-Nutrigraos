@@ -86,3 +86,29 @@ function Pesquisar(){
         }
     }
 }
+
+// Botão para exibir as categorias existentes
+
+const botaoCateg = document.getElementById("mostrar-categorias");
+const containerCateg = document.querySelector(".vizualizar-categ");
+
+botaoCateg.addEventListener("click",()=>{
+    if(containerCateg.style.display === "none"){
+        containerCateg.style.display = "block"
+    }
+    else{
+        containerCateg.style.display = "none"
+    }
+});
+
+// Deletar Categoria
+
+const InputNomeCategExcluir = document.getElementById("nome-categ-excluir");
+const solicitarExclu = document.getElementById("solicitar-exclusao");
+
+function DeletarCateg(buttonElement){
+    let categoriaSelecionada = buttonElement.parentElement.innerText;
+    console.log(categoriaSelecionada);
+    InputNomeCategExcluir.value = categoriaSelecionada;
+    solicitarExclu.click(); 
+}

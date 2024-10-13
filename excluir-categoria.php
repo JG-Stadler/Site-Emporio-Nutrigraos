@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/cadastro-edicao-exclusao.css">
     <link rel="stylesheet" href="styles/estilos-globais.css">
-    <title>Excluir Produto</title>
+    <title>Excluir categoria</title>
 </head>
 <body>
     <?php
         include('conection.php');
-        $idProdutoExcluido = filter_input(INPUT_POST,'idExcluir', FILTER_SANITIZE_NUMBER_INT);
-        $sql = "DELETE FROM produtos WHERE cod_produto = $idProdutoExcluido;";
+        $nomeCategExclu = filter_input(INPUT_POST,'nome-categ-excluir', FILTER_SANITIZE_STRING);
+        $sql = "DELETE FROM categoria WHERE nome_categ = '$nomeCategExclu';";
         
         if(mysqli_query($mysqli,$sql)){
-            echo "<div class='excluido'><h1>Exclusão do produto</h1><h2>Executada com sucesso</h2><a href='./pages/admin.php'>Voltar ao inicio</a></div>";
+            echo "<div class='excluido'><h1>Exclusão da categoria</h1><h2>Executada com sucesso</h2><a href='./pages/admin.php'>Voltar ao inicio</a></div>";
         }
         else{
             echo "<div class='erro-excluir'><h1>Erro ao excluir</h1><p>$mysqli->error</p><a href='./pages/admin.php'>Voltar ao inicio</a></div>";
