@@ -95,6 +95,18 @@
         ?>
     </main>
     
+    <div class="info-produto d-flex align-items-center flex-column text-center">
+        <button id="close-info-window">X</button>
+        <h1 id="nome-produto-selecionado">Nome</h1>
+        <h2 id="categoria-produto-selecionado">categoria</h2>
+        <p id="descri-produto-selecionado">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat laborum nihil, perspiciatis eius possimus quaerat ut libero tempore numquam debitis, modi recusandae ipsum placeat consectetur? Perferendis dolorem quas sed illo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente laborum vitae doloribus vero iusto quaerat fugit officiis nihil doloremque officia consequuntur ea hic pariatur, veritatis error in maxime? Quaerat, et.</p>
+        <p class="m-0">Valor 100g</p>
+        <h3 id="valor-produto-selecionado">R$00.00</h3>
+        <label for="peso-desejado">Selecione a quantidade desejada:</label>
+        <div class="d-flex align-items-flex-start"><input type="number" name="peso-desejado" id="peso-desejado"><p class="m-0">g</p></div>
+        <button id="addToCart">Adicionar ao carrinho</button>
+    </div>
+
     <footer class="rodape">
         <img src="images/logo-nutrigraos-preta.png">
         <nav class="nav-footer">

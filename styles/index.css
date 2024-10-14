@@ -225,6 +225,54 @@ body{
     transform: translateX(-50%);
     font-size: small;
 }
+
+/* Informaçoes do produto / Adicionar ao carrinho */
+
+.info-produto{
+    background-color: var(--Verde);
+    border: solid 2px var(--Branco);
+    border-radius: 10px;
+    color: var(--Branco);
+    padding: 20px 15px;
+    max-width: 90vw;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#close-info-window{
+    font-size: xx-large;
+    align-self: flex-end;
+    cursor: pointer;
+    width: fit-content;
+    color: var(--Branco);
+    border: none;
+    background: none;
+}
+#descri-produto-selecionado{
+    font-size: small;
+}
+#valor-produto-selecionado{
+    font-size: xx-large;
+}
+#valor-produto-seecionado::before{
+    content: "100g";
+}
+#addToCart{
+    background-color: var(--Verde-escuro);
+    border-radius: 10px;
+    border: solid 1px var(--Branco);
+    padding: 10px 15px;
+    color: var(--Branco);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+#peso-desejado{
+    margin: 2px 0 10px 0;
+    border-radius: 10px;
+    border: solid var(--Verde-escuro);
+    width: 100px;
+}
 /* Rodapé da pagina */
 .rodape{
     background-color: var(--Verde-claro);
