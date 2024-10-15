@@ -60,3 +60,26 @@ SelectOrdem.addEventListener("change",()=>{
     const valores = containerProdutos.getElementsByClassName("valor"); 
     console.log(valores[1].innerText.replace('R$',""))
 });
+
+// Caixa Informaçoes do produto
+const ButtonCloseInfoWindow = document.getElementById("close-info-window");
+const JanelaInfoProdutos = document.getElementById("info-produto");
+
+ButtonCloseInfoWindow.addEventListener("click",()=>{
+    JanelaInfoProdutos.style.display = "none";
+});
+
+function OpenInfoWindow(produto){
+    JanelaInfoProdutos.style.display = "flex";
+    const nome = produto.getElementsByTagName("h1")[0].innerText;
+    const descri = produto.getElementsByTagName("p")[0].innerText;
+    const valor = produto.getElementsByTagName("h2")[0].innerText;
+
+    const nomeInfoWindow = document.getElementById("nome-produto-selecionado");
+    const valorInfoWindow = document.getElementById("valor-produto-selecionado");
+    const descriInfoWindow = document.getElementById("descri-produto-selecionado");
+
+    nomeInfoWindow.innerText = nome;
+    descriInfoWindow.innerText = descri;
+    valorInfoWindow.innerText = valor;
+}

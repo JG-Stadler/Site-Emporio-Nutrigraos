@@ -79,7 +79,8 @@
                 // Percorre os resultados e exibe
                 while($row = $result->fetch_assoc()) {
                     ?>
-                    <div class="produto" id="<?php echo $row["categoria"]?>">
+                    <div class="produto" id="<?php echo $row["categoria"]?>"
+                    onclick="OpenInfoWindow(this)">
                         <div class="foto-produto">
                             <img src="<?php echo $row["url_imagem"]?>" alt="foto do produto">
                         </div>
@@ -95,15 +96,14 @@
         ?>
     </main>
     
-    <div class="info-produto d-flex align-items-center flex-column text-center">
+    <div class="info-produto align-items-center flex-column text-center" id="info-produto">
         <button id="close-info-window">X</button>
-        <h1 id="nome-produto-selecionado">Nome</h1>
-        <h2 id="categoria-produto-selecionado">categoria</h2>
-        <p id="descri-produto-selecionado">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat laborum nihil, perspiciatis eius possimus quaerat ut libero tempore numquam debitis, modi recusandae ipsum placeat consectetur? Perferendis dolorem quas sed illo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente laborum vitae doloribus vero iusto quaerat fugit officiis nihil doloremque officia consequuntur ea hic pariatur, veritatis error in maxime? Quaerat, et.</p>
+        <h1 id="nome-produto-selecionado"></h1>
+        <p id="descri-produto-selecionado"></p>
         <p class="m-0">Valor 100g</p>
-        <h3 id="valor-produto-selecionado">R$00.00</h3>
-        <label for="peso-desejado">Selecione a quantidade desejada:</label>
-        <div class="d-flex align-items-flex-start"><input type="number" name="peso-desejado" id="peso-desejado"><p class="m-0">g</p></div>
+        <h3 id="valor-produto-selecionado"></h3>
+        <label for="peso-desejado">Selecione a quantidade desejada em gramas:</label>
+        <div class="d-flex align-items-flex-start peso"><input type="number" name="peso-desejado" id="peso-desejado"><p class="m-0">g</p></div>
         <button id="addToCart">Adicionar ao carrinho</button>
     </div>
 

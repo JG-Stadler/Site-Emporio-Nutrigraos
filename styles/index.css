@@ -239,6 +239,7 @@ body{
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
+    display: none;
 }
 #close-info-window{
     font-size: xx-large;
@@ -268,10 +269,18 @@ body{
     text-transform: uppercase;
 }
 #peso-desejado{
+    width: 60px;
+    background-color: var(--Branco);
+    border: none;
+    outline: none;
+}
+.peso{
     margin: 2px 0 10px 0;
     border-radius: 10px;
     border: solid var(--Verde-escuro);
-    width: 100px;
+    background-color: var(--Branco);
+    padding: 5px 15px;
+    color: black;
 }
 /* Rodapé da pagina */
 .rodape{
