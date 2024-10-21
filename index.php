@@ -103,7 +103,7 @@
         <p class="m-0">Valor 100g</p>
         <h3 id="valor-produto-selecionado"></h3>
         <label for="peso-desejado">Selecione a quantidade desejada em gramas:</label>
-        <div class="d-flex align-items-flex-start peso"><input type="number" name="peso-desejado" id="peso-desejado"><p class="m-0">g</p></div>
+        <div class="d-flex align-items-flex-start peso"><input placeholder="0" type="number" name="peso-desejado" id="peso-desejado"><p class="m-0">g</p></div>
         <button id="addToCart">Adicionar ao carrinho</button>
     </div>
 

@@ -83,3 +83,15 @@ function OpenInfoWindow(produto){
     descriInfoWindow.innerText = descri;
     valorInfoWindow.innerText = valor;
 }
+function GetInfo(){
+    const nome = document.getElementById("nome-produto-selecionado").innerText;
+    const quant = document.getElementById("peso-desejado").value;
+    if(quant < 0 || quant == 0 || quant == null || quant == undefined){
+        alert("Digite um valor maior que zero");
+    }else{
+        AddToCart();
+    }
+}
+document.getElementById("addToCart").addEventListener("click",()=>{
+    GetInfo();
+});
