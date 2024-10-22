@@ -83,15 +83,41 @@ function OpenInfoWindow(produto){
     descriInfoWindow.innerText = descri;
     valorInfoWindow.innerText = valor;
 }
+const Cart = [];
 function GetInfo(){
     const nome = document.getElementById("nome-produto-selecionado").innerText;
     const quant = document.getElementById("peso-desejado").value;
     if(quant < 0 || quant == 0 || quant == null || quant == undefined){
         alert("Digite um valor maior que zero");
     }else{
-        AddToCart();
+        JanelaInfoProdutos.style.display = "none";
+        AddToCart(nome,quant);
     }
+}
+function AddToCart(nomeProduto,quantidade){
+    const produto = {
+        nome: nomeProduto,
+        quantidade: quantidade
+    };
+    Cart.push(produto);
+    LoadCart();
+}
+function LoadCart(){
+
 }
 document.getElementById("addToCart").addEventListener("click",()=>{
     GetInfo();
+});
+
+// Abrir e fechar carrinho
+
+const carrinhoDeCompras = document.getElementById("cart");
+const BotaoAbrirCarrinho = document.getElementById("abrirCarrinho");
+const BotaoFecharCarrinho = document.getElementById("fecharCarrinho");
+
+BotaoAbrirCarrinho.addEventListener("click",()=>{
+    carrinhoDeCompras.style.display = "flex";
+});
+BotaoFecharCarrinho.addEventListener("click",()=>{
+    carrinhoDeCompras.style.display = "none";
 });

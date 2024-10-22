@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/estilos-globais.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" media="(max-width:700px)" href="styles/adaptar-tela-index.css">
+    <script src="js/script.js" defer></script>
     <title>Nutrigrãos</title>
 </head>
 <body>
@@ -121,6 +122,17 @@
             <img src="images/link-icone.png" class="link-icon">
         </a>
     </footer>
-    <script src="js/script.js"></script>
+
+    <div class="carrinho-de-compras" id="cart">
+        <button id="fecharCarrinho">X</button>
+        <h1>Meu carrinho</h1>
+        <div id="cart-prods" class="d-flex flex-column align-items-center">
+        </div>
+        <button id="finalizar">Finalizar compra</button>
+    </div>
+
+    <button id="abrirCarrinho">
+        <img src="./images/icone-carrinho.jpg" alt="Abrir Carrinho">
+    </button>
 </body>
 </html>
