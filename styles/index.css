@@ -336,6 +336,19 @@ body{
     color: var(--Branco);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.359);
     padding-top: 10px;
+    overflow: scroll;
+}
+#cart-prods{
+    width: 100%;
+}
+.produto-no-carrinho{
+    width: 100%;
+    padding: 10px;
+    padding-left: 5px;
+    border-top: solid 1px var(--Branco);
+}
+.produto-no-carrinho h1{
+    font-size: x-large;
 }
 #finalizar{
     padding: 10px 0;

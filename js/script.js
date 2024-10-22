@@ -102,8 +102,16 @@ function AddToCart(nomeProduto,quantidade){
     Cart.push(produto);
     LoadCart();
 }
+const ListaProdutosCarrinho = document.getElementById("cart-prods");
 function LoadCart(){
-
+    ListaProdutosCarrinho.innerHTML = '';
+    for(let i=0;i<Cart.length;i++){
+        ListaProdutosCarrinho.innerHTML += `
+        <div class="produto-no-carrinho">
+            <h1>${Cart[i].nome}</h1>
+            <p class="m-0">${Cart[i].quantidade}g</p>
+        </div>`
+    }
 }
 document.getElementById("addToCart").addEventListener("click",()=>{
     GetInfo();
