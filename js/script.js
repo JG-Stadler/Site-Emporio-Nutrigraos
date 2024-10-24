@@ -110,6 +110,8 @@ function LoadCart(){
         <div class="produto-no-carrinho">
             <h1>${Cart[i].nome}</h1>
             <p class="m-0">${Cart[i].quantidade}g</p>
+            <button id="remover-do-carrinho"
+            title="Remover do Carrinho" onclick="RemoverDoCarrinho(this)">X</button>
         </div>`
     }
 }
@@ -158,4 +160,16 @@ function EnviarPedido(pedido){
     
     const mensagem = `Olá, ${saudacao}.\nEu gostaria de ${pedido}`;
     console.log(mensagem);
+}
+function RemoverDoCarrinho(ButtonElement){
+    const ProdutoNoCarrinho = ButtonElement.parentElement;
+    const NomeProdutoNoCarrinho = ProdutoNoCarrinho.getElementsByTagName("h1")[0].innerText;
+    for(let i =0; i<Cart.length;i++){
+        if(Cart[i].nome === NomeProdutoNoCarrinho){
+            Cart.splice(i,1)
+            LoadCart();
+        }else{
+            console.log("Erro de remoção");
+        }
+    }
 }
