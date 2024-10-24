@@ -129,3 +129,33 @@ BotaoAbrirCarrinho.addEventListener("click",()=>{
 BotaoFecharCarrinho.addEventListener("click",()=>{
     carrinhoDeCompras.style.display = "none";
 });
+
+// Finalização de compra
+
+const botaoFinalizarCompra = document.getElementById("finalizar");
+botaoFinalizarCompra.addEventListener("click",()=> FinalizarCompra());
+let pedido = ""
+
+function FinalizarCompra(){
+    for(let i = 0; i<Cart.length;i++){
+        pedido += `${Cart[i].quantidade}g de ${Cart[i].nome}, `;
+        console.log(pedido);
+    }
+    EnviarPedido(pedido);
+}
+function EnviarPedido(pedido){
+    const Data = new Date();
+    const HoraAtual = Data.getHours();
+    let saudacao;
+    HoraAtual
+    if (HoraAtual >= 0 && HoraAtual < 12) {
+        saudacao = "Bom dia";
+    } else if (HoraAtual >= 12 && HoraAtual < 18) {
+        saudacao = "Boa tarde";
+    } else {
+        saudacao = "Boa noite";
+    }
+    
+    const mensagem = `Olá, ${saudacao}.\nEu gostaria de ${pedido}`;
+    console.log(mensagem);
+}
