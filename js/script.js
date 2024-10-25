@@ -135,17 +135,22 @@ BotaoFecharCarrinho.addEventListener("click",()=>{
 // Finalização de compra
 
 const botaoFinalizarCompra = document.getElementById("finalizar");
+let pedido = "";
+let mensagem = "";
 botaoFinalizarCompra.addEventListener("click",()=> FinalizarCompra());
-let pedido = ""
+const ConfirmarCompra = document.querySelector(".comfirmar-finalizacao");
 
 function FinalizarCompra(){
     for(let i = 0; i<Cart.length;i++){
         pedido += `${Cart[i].quantidade}g de ${Cart[i].nome}, `;
-        console.log(pedido);
     }
-    EnviarPedido(pedido);
+    GerarMensagem();
+    ConfirmarCompra.style.display = "block";
 }
-function EnviarPedido(pedido){
+function FecharJanelaFinalizar(){
+    ConfirmarCompra.style.display = "none";
+}
+function GerarMensagem(){
     const Data = new Date();
     const HoraAtual = Data.getHours();
     let saudacao;
@@ -158,9 +163,17 @@ function EnviarPedido(pedido){
         saudacao = "Boa noite";
     }
     
-    const mensagem = `Olá, ${saudacao}.\nEu gostaria de ${pedido}`;
-    console.log(mensagem);
+    mensagem = `Olá, ${saudacao}.\nEu gostaria de ${pedido}`;
 }
+function EncaminharMensagem(){
+    ConfirmarCompra.style.display= "none";
+    const mensagemFormatada = encodeURI(mensagem);
+    const urlZAP = `https://wa.me/5522981606831?text=${mensagemFormatada}`;
+    window.open(urlZAP);
+}
+
+// Remoção de itens do carrinho 
+
 function RemoverDoCarrinho(ButtonElement){
     const ProdutoNoCarrinho = ButtonElement.parentElement;
     const NomeProdutoNoCarrinho = ProdutoNoCarrinho.getElementsByTagName("h1")[0].innerText;

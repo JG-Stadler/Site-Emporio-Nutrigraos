@@ -131,6 +131,17 @@
         <button id="finalizar">Finalizar compra</button>
     </div>
 
+    <div class="comfirmar-finalizacao">
+        <h1>Deseja Finalizar a compra?</h1>
+        <p>Ao finalizar a compra você será
+            redirecionado para o whatsapp
+            e uma mensagem automatica será
+            enviada para um de nossos atendentes.
+        </p>
+        <button onclick="FecharJanelaFinalizar()">Não</button>
+        <button onclick="EncaminharMensagem()">Sim</button>
+    </div>
+
     <button id="abrirCarrinho">
         <img src="./images/icone-carrinho.jpg" alt="Abrir Carrinho">
     </button>
