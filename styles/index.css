@@ -383,6 +383,20 @@ body{
     background-color: var(--Branco);
     color: var(--Verde);
 }
+#quant-itens-carrinho{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    color: #fff;
+    font-size: smaller;
+    position: fixed;
+    right: 75px;
+    bottom: 70px;
+    z-index: 2;
+    display: grid;
+    place-content: center;
+}
 #abrirCarrinho{
     overflow: hidden;
     border-radius: 50%;
@@ -392,7 +406,7 @@ body{
     box-shadow:  0 0 5px rgba(0, 0, 0, 0.353);
     position: fixed;
     right: 30px;
-    bottom: 30px;
+    bottom:30px;
 }
 #abrirCarrinho img{
     width: 100%;

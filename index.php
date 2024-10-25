@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles/estilos-globais.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" media="(max-width:700px)" href="styles/adaptar-tela-index.css">
-    <script src="js/script.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/menu-main-page.js" defer></script>
+    <script src="js/produto-info.js" defer></script>
     <title>Nutrigrãos</title>
 </head>
 <body>
@@ -142,6 +144,7 @@
         <button onclick="EncaminharMensagem()">Sim</button>
     </div>
 
+    <div id="quant-itens-carrinho">0</div>
     <button id="abrirCarrinho">
         <img src="./images/icone-carrinho.jpg" alt="Abrir Carrinho">
     </button>
