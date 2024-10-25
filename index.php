@@ -148,5 +148,7 @@
     <button id="abrirCarrinho">
         <img src="./images/icone-carrinho.jpg" alt="Abrir Carrinho">
     </button>
+
+    <div class="adicionado">Item adicionado ao carrinho</div>
 </body>
 </html>

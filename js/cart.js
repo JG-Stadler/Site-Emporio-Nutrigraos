@@ -1,9 +1,6 @@
 // Array de objetos | carrinho de compras
 const Cart = [];
-
-document.getElementById("addToCart").addEventListener("click",()=>{
-    GetInfo();
-});
+const MensagemItemAdicionado = document.querySelector(".adicionado");
 
 function AddToCart(nomeProduto,quantidade){
     const produto = {
@@ -12,6 +9,10 @@ function AddToCart(nomeProduto,quantidade){
     };
     Cart.push(produto);
     LoadCart();
+    MensagemItemAdicionado.classList.add("adicionado-ativo");
+    setTimeout(()=>{
+        MensagemItemAdicionado.classList.remove("adicionado-ativo");
+    },1500);
 }
 const quantidadeItensNoCarrinho = document.getElementById("quant-itens-carrinho");
 const ListaProdutosCarrinho = document.getElementById("cart-prods");
@@ -51,11 +52,15 @@ botaoFinalizarCompra.addEventListener("click",()=> FinalizarCompra());
 const ConfirmarCompra = document.querySelector(".comfirmar-finalizacao");
 
 function FinalizarCompra(){
-    for(let i = 0; i<Cart.length;i++){
-        pedido += `${Cart[i].quantidade}g de ${Cart[i].nome}, `;
+    if(Cart.length === 0){
+        alert("Adicione itens ao carrinho para poder finalizar sua compra");
+    }else{
+        for(let i = 0; i<Cart.length;i++){
+            pedido += `${Cart[i].quantidade}g de ${Cart[i].nome}, `;
+        }
+        GerarMensagem();
+        ConfirmarCompra.style.display = "block";
     }
-    GerarMensagem();
-    ConfirmarCompra.style.display = "block";
 }
 function FecharJanelaFinalizar(){
     ConfirmarCompra.style.display = "none";

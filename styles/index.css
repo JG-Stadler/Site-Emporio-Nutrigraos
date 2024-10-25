@@ -367,6 +367,28 @@ body{
 .produto-no-carrinho h1{
     font-size: x-large;
 }
+.adicionado{
+    color: var(--Branco);
+    background-color: var(--Verde-escuro);
+    border-radius:0 0 10px 10px;
+    border: solid 2px var(--Branco);
+    border-top: none;
+    font-size: xx-large;
+    position: fixed;
+    top: 0;
+    left: 50vw;
+    max-width: 90vw;
+    padding: 10px 20px;
+    transition: .5s;
+    transform: scaleY(0)translateX(-50%);
+    transform-origin: top;
+}
+.adicionado-ativo{
+    transform: scaleY(1)translateX(-50%) !important;
+}
+
+/* Finalização da compra  */
+
 #finalizar{
     padding: 10px 0;
     width: 100%;

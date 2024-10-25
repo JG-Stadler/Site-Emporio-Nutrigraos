@@ -20,6 +20,10 @@ function OpenInfoWindow(produto){
     descriInfoWindow.innerText = descri;
     valorInfoWindow.innerText = valor;
 }
+document.getElementById("addToCart").addEventListener("click",()=>{
+    GetInfo();
+});
+
 function GetInfo(){
     const nome = document.getElementById("nome-produto-selecionado").innerText;
     const quant = document.getElementById("peso-desejado").value;
