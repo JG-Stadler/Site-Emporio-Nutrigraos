@@ -123,6 +123,7 @@ body{
     padding: 5px 10px;
     border-radius: 20px;
     height: fit-content;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.442);
 }
 #pesquisar{
     border: none;
@@ -205,6 +206,11 @@ body{
     text-overflow: ellipsis;
     overflow: hidden;
     text-wrap: nowrap;
+    /* display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical; 
+    text-overflow: ellipsis; */
 }
 .valor{
     font-size: 2.5rem;
@@ -310,6 +316,15 @@ body{
 .nav-footer a{
     text-decoration: none;
 }
+.creditos{
+    justify-self: end;
+    grid-column: 2;
+    grid-row: 2;
+    width: fit-content;
+}
+.creditos a{
+    font-weight: bolder;
+}
 .link-icon{
     width: 20px;
 }
@@ -330,7 +345,15 @@ body{
     color: var(--Branco);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.359);
     padding-top: 10px;
-    overflow: scroll;
+    overflow-y: scroll;
+    z-index: 3;
+}
+.carrinho-vazio{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bolder;
+    border-top: solid 2px var(--Branco);
 }
 #cart-prods{
     width: 100%;

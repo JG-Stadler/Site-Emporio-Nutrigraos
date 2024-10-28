@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/estilos-globais.css">
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" media="(max-width:700px)" href="styles/adaptar-tela-index.css">
+    <link rel="stylesheet" media="(max-width:650px)" href="styles/adaptar-tela-index.css">
     <script src="js/cart.js" defer></script>
     <script src="js/menu-main-page.js" defer></script>
     <script src="js/produto-info.js" defer></script>
@@ -121,11 +121,17 @@
         <a href="#" class="saiba-mais">Saiba mais
             <img src="images/link-icone.png" class="link-icon">
         </a>
+
+        <p class="creditos m-0">Desenvolvido por: 
+                <a href="https://jg-stadler.github.io/Lista-de-links-JG-Stadler/">João Stadler</a>
+            </p>
     </footer>
 
     <div class="carrinho-de-compras" id="cart">
         <button id="fecharCarrinho">X</button>
         <h1>Meu carrinho</h1>
+        <p class="m-0 carrinho-vazio">
+            Você ainda não adicionou nenhum produto</p>
         <div id="cart-prods" class="d-flex flex-column align-items-center">
         </div>
         <button id="finalizar">Finalizar compra</button>
