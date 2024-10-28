@@ -48,3 +48,7 @@
     align-items: center;
     flex-direction: column;
 }
+.adicionado{
+    font-size: x-large;
+    z-index: 4;
+}

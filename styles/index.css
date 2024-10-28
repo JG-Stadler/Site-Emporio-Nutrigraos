@@ -11,7 +11,7 @@ body{
 }
 #logo-nutrigraos{
     width: 300px;
-    max-width: 70vw;
+    max-width: 60vw;
 }
 .nav-list{
     list-style: none;
@@ -229,17 +229,28 @@ body{
 /* Informaçoes do produto / Adicionar ao carrinho */
 
 .info-produto{
-    background-color: var(--Verde);
-    border: solid 2px var(--Branco);
+    background-color: var(--Verde-claro);
+    border: solid 2px var(--Preto);
     border-radius: 10px;
-    color: var(--Branco);
+    color: var(--Verde-escuro);
     padding: 20px 15px;
+    width: 600px;
     max-width: 90vw;
+    max-height: 100vh;
     position: fixed;
-    top: 10%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,-50%);
     display: none;
+    z-index: 3;
+    overflow: hidden;
+}
+.info-produto>h1{
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.info-produto>p{
+
 }
 #close-info-window{
     font-size: xx-large;
@@ -249,6 +260,15 @@ body{
     color: var(--Branco);
     border: none;
     background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 0 0 0 10px;
+    display: grid;
+    place-content: center;
+    background-color: var(--Preto);
 }
 #descri-produto-selecionado{
     font-size: small;
@@ -349,17 +369,17 @@ body{
     z-index: 3;
 }
 .carrinho-vazio{
-    width: 100%;
+    width: 100vw;
     padding: 10px 0;
     text-align: center;
     font-weight: bolder;
     border-top: solid 2px var(--Branco);
 }
 #cart-prods{
-    width: 100%;
+    width: 100vw;
 }
 .produto-no-carrinho{
-    width: 100%;
+    width: 100vw;
     padding: 10px;
     padding-left: 5px;
     border-top: solid 1px var(--Branco);
@@ -394,11 +414,12 @@ body{
     position: fixed;
     top: 0;
     left: 50vw;
-    max-width: 90vw;
+    max-width: 98vw;
     padding: 10px 20px;
     transition: .5s;
     transform: scaleY(0)translateX(-50%);
     transform-origin: top;
+    text-align: center;
 }
 .adicionado-ativo{
     transform: scaleY(1)translateX(-50%) !important;
@@ -408,7 +429,7 @@ body{
 
 #finalizar{
     padding: 10px 0;
-    width: 100%;
+    width: 100vw;
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: bolder;
@@ -422,6 +443,9 @@ body{
     background-color: var(--Branco);
     color: var(--Verde);
 }
+
+/* Botão Abrir/Fechar carrinho */
+
 #quant-itens-carrinho{
     width: 20px;
     height: 20px;

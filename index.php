@@ -130,9 +130,9 @@
     <div class="carrinho-de-compras" id="cart">
         <button id="fecharCarrinho">X</button>
         <h1>Meu carrinho</h1>
-        <p class="m-0 carrinho-vazio">
-            Você ainda não adicionou nenhum produto</p>
         <div id="cart-prods" class="d-flex flex-column align-items-center">
+        <p class="m-0 carrinho-vazio">
+        Você ainda não adicionou nenhum produto</p>
         </div>
         <button id="finalizar">Finalizar compra</button>
     </div>
@@ -149,7 +149,7 @@
     </div>
 
     <div id="quant-itens-carrinho">0</div>
-    <button id="abrirCarrinho">
+    <button id="abrirCarrinho" title="Abrir o carrinho de compras">
         <img src="./images/icone-carrinho.jpg" alt="Abrir Carrinho">
     </button>
 
