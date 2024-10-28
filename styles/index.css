@@ -181,8 +181,11 @@ body{
 }
 .produto>.foto-produto{
     background-color: #ffff; 
-    width: 200px;
-    height: 200px;
+    width: 90%;
+    height: 0;
+    padding-top: 90%;
+    background-size: cover;
+    background-position: center center;
     overflow: hidden;
     border-radius: 20px;
     object-fit: contain;

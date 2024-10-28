@@ -76,8 +76,8 @@
                     ?>
                     <div class="produto" id="<?php echo $row["categoria"]?>"
                     onclick="OpenInfoWindow(this)">
-                        <div class="foto-produto">
-                            <img src="<?php echo $row["url_imagem"]?>" alt="foto do produto">
+                        <div class="foto-produto" style="background-image: url(<?php echo $row["url_imagem"]?>)">
+                            <!-- <img src="" alt="foto do produto"> -->
                         </div>
                         <h1 class="nome-produto"><?php echo $row['nome']?></h1>
                         <p class="descri-produto"><?php echo $row['descri']?></p>
