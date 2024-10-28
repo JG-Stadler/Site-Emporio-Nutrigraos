@@ -1,10 +1,7 @@
-.filtros{
-    align-self: flex-start;
-    flex-direction: column;
-}
 @media(max-width:600px){
 .filtragem-pesquisa{
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: flex-start;
 }
 #input-pesquisa{
     width: 80vw;
@@ -15,4 +12,10 @@
     width: 90vw;
     margin: 20px auto;
 }
+}
+
+/* Adaptação dos produtos */
+
+.produto{
+    width: 300px;
 }

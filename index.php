@@ -31,8 +31,9 @@
             <div class="barra-do-menu" id="barra3"></div>
         </div>
     </header>
-    <section class="filtragem-pesquisa d-flex align-items-end">
-        <div class="filtros d-flex">
+
+    <!-- Sistemas de pesquisa e filtragem de produtos -->
+    <section class="filtragem-pesquisa d-flex">
             <div class="filtro-de-pesquisa d-flex flex-column categ">
                 <label for="categ">Categoria</label>
                 <select name="categoria" id="categ">
@@ -51,15 +52,6 @@
                         }
                     ?>
                 </select>
-            </div>
-            <div class="filtro-de-pesquisa d-flex flex-column ordem">
-                <label for="ordenar">Ordenar por</label>
-                <select name="ordenar" id="ordenar">
-                    <option value="qualquer-v">Qualquer valor valor</option>
-                    <option value="menor-v">Menor valor</option>
-                    <option value="maior-v">Maior valor</option>
-                </select>
-            </div>
         </div>
 
         <label for="input-pesquisa" class="barra-de-pesquisa d-flex align-items-center">

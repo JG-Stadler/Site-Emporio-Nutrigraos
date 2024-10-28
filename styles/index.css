@@ -101,11 +101,9 @@ body{
     padding: 20px 0;
     width: 90vw;
     margin: 0 auto;
+    align-items: flex-end;
 }
-.filtros{
-    gap: 10px;
-}
-#ordenar,#categ{
+#categ{
     background-color: var(--Verde);
     color: #fff;
     padding: 5px 10px;
@@ -119,9 +117,6 @@ body{
     color: #fff;
     text-shadow: 0 0 5px black;
 }
-/* .ordem{
-    justify-self: flex-start;
-} */
 .barra-de-pesquisa{
     background-color: #ffff;
     width: fit-content;
