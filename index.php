@@ -76,7 +76,13 @@
                     ?>
                     <div class="produto" id="<?php echo $row["categoria"]?>"
                     onclick="OpenInfoWindow(this)">
-                        <div class="foto-produto" style="background-image: url(<?php echo $row["url_imagem"]?>)">
+                        <div class="foto-produto" style="background-image: url(<?php 
+                        if($row['url_imagem'] != ''){
+                            echo $row["url_imagem"];
+                        }else{
+                            echo 'images/imagem-nao-encontrada.jpg';
+                        }
+                        ?>)">
                             <!-- <img src="" alt="foto do produto"> -->
                         </div>
                         <h1 class="nome-produto"><?php echo $row['nome']?></h1>
