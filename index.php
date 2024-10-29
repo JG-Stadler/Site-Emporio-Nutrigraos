@@ -39,7 +39,10 @@
                 <select name="categoria" id="categ">
                     <option value="todas">Todas as categorias</option>
                     <?php
-                        include_once('conection.php');
+                       include('conection.php');
+                       if ($mysqli->connect_error) {
+                            die("Conexão falhou: " . $mysqli->connect_error);
+                        }
                         $sql = "SELECT nome_categ FROM categoria";
                         $result = $mysqli->query($sql);
                         // Gerar dinamicamente as opções do select

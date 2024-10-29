@@ -18,11 +18,6 @@ $mysqli = new mysqli($hostname, $username, $password, $databaseName, $port);
 // Verificando a conexão
 if ($mysqli->connect_error) {
     die("Conexão falhou: " . $mysqli->connect_error);
-} else {
-    echo "Conexão bem-sucedida!";
 }
-
-// Opcional: Fechar a conexão
-$mysqli->close();
 ?>
 
