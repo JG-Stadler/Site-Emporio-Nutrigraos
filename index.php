@@ -19,8 +19,8 @@
         </figure>
         <nav class="navbar" id="menu">
             <ul class="nav-list d-flex align-items-center m-0 p-0">
-                <li class="nav-item"><a href="#" class="nav-link">Instagran</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="https://www.instagram.com/emporio.nutrigraos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="nav-link">Instagran</a></li>
+                <li class="nav-item"><a href="https://wa.me/5522998624140" target="_blank" class="nav-link">Contato</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
             </ul>
         </nav>
