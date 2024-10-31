@@ -41,7 +41,7 @@
 .vizualizar-categ{
     padding-top: 10px;
     height: 150px;
-    overflow: scroll;
+    overflow-y: scroll;
     display: none;
     position: absolute;
     top: 95%;

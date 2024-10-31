@@ -65,13 +65,19 @@
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){?>
             <div class="produto" id="<?php echo $row["cod_produto"]?>">
-                <img src="<?php echo $row["url_imagem"]?>" alt="ft-produto" class="foto-prod">
-                <h1 class="nome m-0"><?php echo $row["nome"]?></h1>
-                <p class="categ m-0"><?php echo $row["categoria"]?></p>
-                <p class="descri m-0"><?php echo $row["descri"]?></p>
-                <p class="valor m-0">R$<?php echo $row["valor"]?></p>
+            <img class="foto-prod" src='<?php 
+                        if($row['url_imagem'] != ''){
+                            echo $row["url_imagem"];
+                        }else{
+                            echo '../images/imagem-nao-encontrada.jpg';
+                        }
+            ?>'>
+            <h1 class="nome m-0"><?php echo $row["nome"]?></h1>
+            <p class="categ m-0"><?php echo $row["categoria"]?></p>
+            <p class="descri m-0"><?php echo $row["descri"]?></p>
+            <p class="valor m-0">R$<?php echo $row["valor"]?></p>
 
-                <div class="controles-produto d-flex">
+            <div class="controles-produto d-flex">
                     <button id="editar-produto" class="btn p-0" onclick="JanelaDeEdicao(this)">
                         <img src="../images/icone-lapis.png" alt="editar produto"  title="Editar Produto">
                     </button>
@@ -80,7 +86,7 @@
                         <img src="../images/icone-lixeira.png" alt="Excluir produto" title="Excluir Produto"/>
                     </button>
                 </div>
-            </div>
+            </i>
         <?php }
         }else{
             echo "Não há produtos no banco de dados";
