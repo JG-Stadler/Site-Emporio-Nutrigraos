@@ -86,7 +86,8 @@
                         <img src="../images/icone-lixeira.png" alt="Excluir produto" title="Excluir Produto"/>
                     </button>
                 </div>
-            </i>
+            </div>
+        </div>
         <?php }
         }else{
             echo "Não há produtos no banco de dados";
