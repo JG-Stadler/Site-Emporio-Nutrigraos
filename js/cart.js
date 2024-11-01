@@ -83,7 +83,7 @@ function GerarMensagem(){
 function EncaminharMensagem(){
     ConfirmarCompra.style.display= "none";
     const mensagemFormatada = encodeURI(mensagem);
-    const urlZAP = `https://wa.me/5522981606831?text=${mensagemFormatada}`;
+    const urlZAP = `https://wa.me/5522998624140?text=${mensagemFormatada}`;
     window.open(urlZAP);
 }
 
