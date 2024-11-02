@@ -59,6 +59,7 @@ function FinalizarCompra(){
             pedido += `${Cart[i].quantidade}g de ${Cart[i].nome}, `;
         }
         GerarMensagem();
+        carrinhoDeCompras.style.display = "none";
         ConfirmarCompra.style.display = "block";
     }
 }

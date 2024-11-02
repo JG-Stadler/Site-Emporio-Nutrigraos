@@ -8,6 +8,7 @@ body{
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.548);
     color: var(--Branco);
     padding: 30px 0;
+    animation: Descer .5s ;
 }
 #logo-nutrigraos{
     width: 300px;
@@ -103,6 +104,9 @@ body{
     margin: 0 auto;
     align-items: flex-end;
 }
+.filtro-de-pesquisa{
+    animation: DeslizarParaDireita .5s;
+}
 #categ{
     background-color: var(--Verde);
     color: #fff;
@@ -124,6 +128,7 @@ body{
     border-radius: 20px;
     height: fit-content;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.442);
+    animation: DeslizarParaEsquerda .5s;
 }
 #pesquisar{
     border: none;
@@ -175,6 +180,7 @@ body{
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
     transition: .5s;
     cursor: pointer;
+    animation: Subir 1s;
 }
 .produto:hover{
     transform: translateY(-10px);
@@ -206,11 +212,6 @@ body{
     text-overflow: ellipsis;
     overflow: hidden;
     text-wrap: nowrap;
-    /* display: -webkit-box;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-    -webkit-box-orient: vertical; 
-    text-overflow: ellipsis; */
 }
 .valor{
     font-size: 2.5rem;
@@ -248,9 +249,6 @@ body{
 .info-produto>h1{
     font-weight: bolder;
     text-transform: uppercase;
-}
-.info-produto>p{
-
 }
 #close-info-window{
     font-size: xx-large;
@@ -379,7 +377,7 @@ body{
     width: 100%;
 }
 .produto-no-carrinho{
-    width: 100vw;
+    width: 100%;
     padding: 10px;
     padding-left: 5px;
     border-top: solid 1px var(--Branco);

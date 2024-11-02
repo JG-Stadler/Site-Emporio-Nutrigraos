@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/estilos-globais.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" media="(max-width:650px)" href="styles/adaptar-tela-index.css">
+    <link rel="stylesheet" href="styles/animation.css">
     <script src="js/cart.js" defer></script>
     <script src="js/menu-main-page.js" defer></script>
     <script src="js/produto-info.js" defer></script>

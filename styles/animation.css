@@ -1,0 +1,36 @@
+@keyframes Descer{
+    from{
+        transform: translateY(-100%);
+        opacity: 0%;
+    }to{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+@keyframes Subir{
+    from{
+        transform: translateY(100%);
+        opacity: 0%;
+    }to{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+@keyframes DeslizarParaEsquerda{
+    from{
+        transform: translateX(100%);
+        opacity: 0%;
+    }to{
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+@keyframes DeslizarParaDireita{
+    from{
+        transform: translateX(-100%);
+        opacity: 0%;
+    }to{
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
