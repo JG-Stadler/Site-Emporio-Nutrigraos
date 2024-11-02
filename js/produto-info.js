@@ -11,14 +11,21 @@ function OpenInfoWindow(produto){
     const nome = produto.getElementsByTagName("h1")[0].innerText;
     const descri = produto.getElementsByTagName("p")[0].innerText;
     const valor = produto.getElementsByTagName("h2")[0].innerText;
+    const foto = produto.getElementsByTagName("div")[0];
+    const estilo = window.getComputedStyle(foto);
+    const imagemFundo = estilo.backgroundImage;
+    const urlFoto = imagemFundo.slice(5,-2);
 
+    console.log(urlFoto)
     const nomeInfoWindow = document.getElementById("nome-produto-selecionado");
     const valorInfoWindow = document.getElementById("valor-produto-selecionado");
     const descriInfoWindow = document.getElementById("descri-produto-selecionado");
+    const imgInfoWindow = document.getElementById("img-produto-selecionado");
 
     nomeInfoWindow.innerText = nome;
     descriInfoWindow.innerText = descri;
     valorInfoWindow.innerText = valor;
+    imgInfoWindow.style.backgroundImage = `url("${urlFoto}")`;
 }
 document.getElementById("addToCart").addEventListener("click",()=>{
     GetInfo();

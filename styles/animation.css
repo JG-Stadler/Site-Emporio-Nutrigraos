@@ -34,3 +34,10 @@
         opacity: 100%;
     }
 }
+@keyframes Fade{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 100%;
+    }
+}

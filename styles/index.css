@@ -195,7 +195,6 @@ body{
     background-position: center center;
     overflow: hidden;
     border-radius: 20px;
-    object-fit: contain;
     max-width: 90%;
 }
 .nome-produto{
@@ -230,75 +229,51 @@ body{
 /* Informaçoes do produto / Adicionar ao carrinho */
 
 .info-produto{
-    background-color: var(--Verde-claro);
-    border: solid 2px var(--Preto);
-    border-radius: 10px;
-    color: var(--Verde-escuro);
-    padding: 20px 15px;
-    width: 600px;
-    max-width: 90vw;
-    max-height: 100vh;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: none;
-    z-index: 3;
-    overflow: hidden;
+   animation: Fade 1s;
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   overflow-y: scroll;
 }
 .info-produto>h1{
-    font-weight: bolder;
-    text-transform: uppercase;
+    
 }
 #close-info-window{
-    font-size: xx-large;
-    align-self: flex-end;
-    cursor: pointer;
-    width: fit-content;
-    color: var(--Branco);
-    border: none;
-    background: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 0 0 0 10px;
-    display: grid;
-    place-content: center;
-    background-color: var(--Preto);
+    
 }
 #descri-produto-selecionado{
-    font-size: small;
+
 }
 #valor-produto-selecionado{
-    font-size: xx-large;
+
 }
 #valor-produto-seecionado::before{
     content: "100g";
 }
+#img-produto-selecionado{
+    background-color: #ffff; 
+    width:400px;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    border-radius: 20px;
+    object-fit: contain;
+    max-width: 90%;
+    background-size: cover;
+    background-position: center center;
+}
 #addToCart{
-    background-color: var(--Verde-escuro);
-    border-radius: 10px;
-    border: solid 1px var(--Branco);
-    padding: 10px 15px;
-    color: var(--Branco);
-    font-weight: bolder;
-    text-transform: uppercase;
+
 }
 #peso-desejado{
-    width: 60px;
-    background-color: var(--Branco);
-    border: none;
-    outline: none;
+
 }
 .peso{
-    margin: 2px 0 10px 0;
-    border-radius: 10px;
-    border: solid var(--Verde-escuro);
-    background-color: var(--Branco);
-    padding: 5px 15px;
-    color: black;
+
 }
 /* Rodapé da pagina */
 .rodape{

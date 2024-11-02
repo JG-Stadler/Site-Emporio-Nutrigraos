@@ -102,6 +102,7 @@
     </main>
     
     <div class="info-produto align-items-center flex-column text-center" id="info-produto">
+        <div id="img-produto-selecionado"></div>
         <button id="close-info-window">X</button>
         <h1 id="nome-produto-selecionado"></h1>
         <p id="descri-produto-selecionado"></p>
