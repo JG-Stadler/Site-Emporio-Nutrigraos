@@ -22,7 +22,7 @@
             <ul class="nav-list d-flex align-items-center m-0 p-0">
                 <li class="nav-item"><a href="https://www.instagram.com/emporio.nutrigraos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="nav-link">Instagran</a></li>
                 <li class="nav-item"><a href="https://wa.me/5522998624140" target="_blank" class="nav-link">Contato</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" onclick="Indisponivel()">Sobre</a></li>
             </ul>
         </nav>
         <div class="botao-abrir-menu d-flex flex-column justify-content-between d-none"
@@ -106,7 +106,6 @@
         <button id="close-info-window">X</button>
         <h1 id="nome-produto-selecionado"></h1>
         <p id="descri-produto-selecionado"></p>
-        <!-- <p class="m-0">Valor 100g</p> -->
         <h3 id="valor-produto-selecionado"></h3>
         <label for="peso-desejado" class="sele-peso-label">Selecione a quantidade desejada em gramas:</label>
         <div class="d-flex align-items-center peso"><input step="50" placeholder="0" type="number" name="peso-desejado" id="peso-desejado"><p class="m-0 gramas">g</p></div>
@@ -123,7 +122,7 @@
                 <img src="images/icone-instagran.png" alt="instagran">
             </a>
         </nav>
-        <a href="#" class="saiba-mais">Saiba mais
+        <a href="#" class="saiba-mais" onclick="Indisponivel()">Saiba mais
             <img src="images/link-icone.png" class="link-icon">
         </a>
 
@@ -159,5 +158,11 @@
     </button>
 
     <div class="adicionado">Item adicionado ao carrinho</div>
+
+    <script>
+        function Indisponivel(){
+            alert("Esta pagina se encontra indisponivel no momento");
+        }
+    </script>
 </body>
 </html>
