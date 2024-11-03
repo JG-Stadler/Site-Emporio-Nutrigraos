@@ -106,10 +106,10 @@
         <button id="close-info-window">X</button>
         <h1 id="nome-produto-selecionado"></h1>
         <p id="descri-produto-selecionado"></p>
-        <p class="m-0">Valor 100g</p>
+        <!-- <p class="m-0">Valor 100g</p> -->
         <h3 id="valor-produto-selecionado"></h3>
-        <label for="peso-desejado">Selecione a quantidade desejada em gramas:</label>
-        <div class="d-flex align-items-flex-start peso"><input step="50" placeholder="0" type="number" name="peso-desejado" id="peso-desejado"><p class="m-0">g</p></div>
+        <label for="peso-desejado" class="sele-peso-label">Selecione a quantidade desejada em gramas:</label>
+        <div class="d-flex align-items-center peso"><input step="50" placeholder="0" type="number" name="peso-desejado" id="peso-desejado"><p class="m-0 gramas">g</p></div>
         <button id="addToCart">Adicionar ao carrinho</button>
     </div>
 

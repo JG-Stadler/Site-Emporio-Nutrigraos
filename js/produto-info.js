@@ -7,7 +7,7 @@ ButtonCloseInfoWindow.addEventListener("click",()=>{
 });
 
 function OpenInfoWindow(produto){
-    JanelaInfoProdutos.style.display = "flex";
+    JanelaInfoProdutos.style.display = "grid";
     const nome = produto.getElementsByTagName("h1")[0].innerText;
     const descri = produto.getElementsByTagName("p")[0].innerText;
     const valor = produto.getElementsByTagName("h2")[0].innerText;
