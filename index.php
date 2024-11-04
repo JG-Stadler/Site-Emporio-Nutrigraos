@@ -138,6 +138,16 @@
         <p class="m-0 carrinho-vazio">
         Você ainda não adicionou nenhum produto</p>
         </div>
+        <div class="subtotal">
+            <p class="m-0 ST">Sub Total: R$<span id="sub-total-compra">00,00</span></p>
+            <p class="m-0 mensagem-sub-total">
+                <span>Atenção:</span> O valor mostrado é um subtotal estimado. 
+                O valor final será confirmado durante o atendimento no WhatsApp, 
+                considerando variações de 
+                peso e disponibilidade dos produtos. 
+                Agradecemos pela compreensão!
+            </p>
+        </div>
         <button id="finalizar">Finalizar compra</button>
     </div>
 

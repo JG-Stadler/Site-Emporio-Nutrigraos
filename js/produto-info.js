@@ -34,10 +34,11 @@ document.getElementById("addToCart").addEventListener("click",()=>{
 function GetInfo(){
     const nome = document.getElementById("nome-produto-selecionado").innerText;
     const quant = document.getElementById("peso-desejado").value;
+    const ValorProduto = document.getElementById("valor-produto-selecionado").innerText.replace("R$","");
     if(quant < 0 || quant == 0 || quant == null || quant == undefined){
         alert("Digite um valor maior que zero");
     }else{
         JanelaInfoProdutos.style.display = "none";
-        AddToCart(nome,quant);
+        AddToCart(nome,quant,ValorProduto);
     }
 }

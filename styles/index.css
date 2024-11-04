@@ -476,6 +476,21 @@ body{
     font-weight: bolder;
     border-top: solid 2px var(--Branco);
 }
+.subtotal{
+    border-top: solid 1px var(--Branco);
+    width: 100%;
+    padding: 15px 10px;
+}
+.ST{
+    font-size: large;
+}
+.mensagem-sub-total{
+    font-size: smaller;
+    color: var(--Verde-claro);
+}
+.mensagem-sub-total span{
+    color: var(--Branco);
+}
 #cart-prods{
     width: 100%;
 }
@@ -488,11 +503,17 @@ body{
     grid-auto-columns: auto;
     grid-auto-rows: auto;
 }
-.produto-no-carrinho p{
+.quant-cart{
     grid-row: 2;
 }
-.produto-no-carrinho button{
+.sub-total-cart{
+    grid-row: 1/3;
     grid-column: 2;
+    justify-self: end;
+    align-self: center;
+}
+.produto-no-carrinho button{
+    grid-column: 3;
     grid-row: 1/3;
     width: fit-content;
     background: none;

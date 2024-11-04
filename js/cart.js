@@ -1,9 +1,11 @@
 // Array de objetos | carrinho de compras
 const Cart = [];
+let valores = [];
 const MensagemItemAdicionado = document.querySelector(".adicionado");
 
-function AddToCart(nomeProduto,quantidade){
+function AddToCart(nomeProduto,quantidade,ValorProduto){
     const produto = {
+        valor:ValorProduto,
         nome: nomeProduto,
         quantidade: quantidade
     };
@@ -16,18 +18,27 @@ function AddToCart(nomeProduto,quantidade){
 }
 const quantidadeItensNoCarrinho = document.getElementById("quant-itens-carrinho");
 const ListaProdutosCarrinho = document.getElementById("cart-prods");
+const PsubTotal = document.querySelector(".sub-total-cart");
+const subTotal = document.getElementById("sub-total-compra");
+
 function LoadCart(){
+    valores = [];
     quantidadeItensNoCarrinho.innerText = Cart.length;
     ListaProdutosCarrinho.innerHTML = '';
     for(let i=0;i<Cart.length;i++){
+        valores.push(Cart[i].quantidade*(Cart[i].valor/100));
         ListaProdutosCarrinho.innerHTML += `
         <div class="produto-no-carrinho">
             <h1>${Cart[i].nome}</h1>
-            <p class="m-0">${Cart[i].quantidade}g</p>
+            <p class="m-0 quant-cart">${Cart[i].quantidade}g</p>
+            <p class="m-0 sub-total-cart">R$${valores[i]}</p>
             <button id="remover-do-carrinho"
             title="Remover do Carrinho" onclick="RemoverDoCarrinho(this)">X</button>
         </div>`
     }
+    const total = valores.reduce((acumulador,valorAtual)=>acumulador + valorAtual,0);
+    console.log(valores)
+    subTotal.innerText = total;
 }
 
 // Abrir e fechar carrinho
