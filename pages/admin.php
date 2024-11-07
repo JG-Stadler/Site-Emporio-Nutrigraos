@@ -18,7 +18,7 @@
         </div>
     </header>
     <section class="boas-vindas">
-        <h1>Olá usuário</h1>
+        <h1>Olá administrador</h1>
         <p class="m-0">Aqui está a listagem de produtos da loja:</p>
     </section>
     <section class="controles d-flex align-items-center justify-content-around">
@@ -67,7 +67,7 @@
             <div class="produto" id="<?php echo $row["cod_produto"]?>">
             <img class="foto-prod" src='<?php 
                         if($row['url_imagem'] != ''){
-                            echo $row["url_imagem"];
+                            echo '.'.$row["url_imagem"];
                         }else{
                             echo '../images/imagem-nao-encontrada.jpg';
                         }
@@ -120,9 +120,8 @@
         ?>
         </select>
         <label for="foto-novo-produto">Foto do Produto:</label>
-        <input type="file" name="foto-novo-produto" id="foto-novo-produto" accept="image/*">
-    
-
+        <input type="file" name="foto-novo-produto" id="foto-novo-produto"
+         accept="image/*">
         <input type="submit" value="Adicionar" class="add-prod-btn">
     </form>
 
@@ -175,7 +174,7 @@
             }
         ?>
         </select>
-        <label for="foto-novo-produto">Foto do Produto:</label>
+        <label for="nova-foto-produto">Foto do Produto:</label>
         <input type="file" name="nova-foto-produto" id="nova-foto-produto" accept="image/*">
     
 

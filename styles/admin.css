@@ -175,6 +175,12 @@
     background-color: var(--Branco);
     padding: 5px 10px;
 }
+#foto-novo-produto{
+    width: 100%;
+    background: none;
+    margin: auto;
+
+}
 .add-prod-btn,.add-categ-btn,.edit-prod-btn{
     width: fit-content;
     padding: 10px 20px;

@@ -22,14 +22,31 @@
     $valor = filter_input(INPUT_POST,"valor-novo-produto",FILTER_VALIDATE_FLOAT);
     $descri = filter_input(INPUT_POST,"descri-novo-produto",FILTER_SANITIZE_STRING);
     $categ = filter_input(INPUT_POST,"categoria-novo-produto",FILTER_SANITIZE_STRING);
+    if (isset($_FILES["foto-novo-produto"])) {
+        $arquivo_foto_produto = $_FILES["foto-novo-produto"];
+        $pasta = "./Fotos-produtos/";
+        $novo_nome_arquivo = uniqid();
+        $nome_arquivo = $arquivo_foto_produto['name'];
+        $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
 
-    $sql_insert = "INSERT INTO produtos (cod_produto,nome,valor,descri,categoria) VALUES ('$cod_produto','$nome','$valor','$descri','$categ');";
-    if(mysqli_query($mysqli,$sql_insert)){
-         echo "<div class='cadastro-feito'><h1>Cadastro do produto</h1><h2>Executado com sucesso</h2><a href='./pages/admin.php'>Voltar ao inicio</a></div>";
+        if ($extensao != 'jpg' && $extensao != 'png') {
+            die("Tipo de arquivo inválido");
+        } else {
+            $upload_aprovado = move_uploaded_file($arquivo_foto_produto['tmp_name'], $pasta . $novo_nome_arquivo . '.' . $extensao);
+            $url = $pasta . $novo_nome_arquivo . '.' . $extensao;
+            if (!$upload_aprovado) {
+                die("Erro ao fazer upload do arquivo");
+            }
+        }
     }
-    else{
-        echo "<div class='erro-cadastro'><h1>Erro ao cadastrar</h1><p>$mysqli->error</p><a href='./pages/admin.php'>Voltar ao inicio</a></div>";
-    }
+
+$sql_insert = "INSERT INTO produtos (cod_produto, nome, valor, descri, categoria, url_imagem) VALUES ('$cod_produto', '$nome', '$valor', '$descri', '$categ','$url');";
+if (mysqli_query($mysqli, $sql_insert)) {
+    echo "<div class='cadastro-feito'><h1>Cadastro do produto</h1><h2>Executado com sucesso</h2><a href='./pages/admin.php'>Voltar ao início</a></div>";
+} else {
+    echo "<div class='erro-cadastro'><h1>Erro ao cadastrar</h1><p>{$mysqli->error}</p><a href='./pages/admin.php'>Voltar ao início</a></div>";
+}
+
 ?>
 </body>
 </html>
