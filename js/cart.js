@@ -31,12 +31,13 @@ function LoadCart(){
         <div class="produto-no-carrinho">
             <h1>${Cart[i].nome}</h1>
             <p class="m-0 quant-cart">${Cart[i].quantidade}g</p>
-            <p class="m-0 sub-total-cart">R$${valores[i]}</p>
+            <p class="m-0 sub-total-cart">R$${valores[i].toFixed(2)}</p>
             <button id="remover-do-carrinho"
             title="Remover do Carrinho" onclick="RemoverDoCarrinho(this)">X</button>
         </div>`
     }
-    const total = valores.reduce((acumulador,valorAtual)=>acumulador + valorAtual,0);
+    // const total = valores.reduce((acumulador,valorAtual)=>acumulador + valorAtual,0);
+    const total = valores.reduce((acumulador, valorAtual) => acumulador + parseFloat(valorAtual), 0).toFixed(2);
     console.log(valores)
     subTotal.innerText = total;
 }
@@ -67,11 +68,11 @@ function FinalizarCompra(){
         alert("Adicione itens ao carrinho para poder finalizar sua compra");
     }else{
         for(let i = 0; i<Cart.length;i++){
-            pedido += `${Cart[i].quantidade}g de ${Cart[i].nome}, `;
+            pedido += `_${Cart[i].quantidade}g de ${Cart[i].nome};\n`;
         }
         GerarMensagem();
         carrinhoDeCompras.style.display = "none";
-        ConfirmarCompra.style.display = "block";
+        ConfirmarCompra.style.display = "flex";
     }
 }
 function FecharJanelaFinalizar(){
@@ -90,7 +91,7 @@ function GerarMensagem(){
         saudacao = "Boa noite";
     }
     
-    mensagem = `Olá, ${saudacao}.\nEu gostaria de ${pedido}`;
+    mensagem = `Olá, ${saudacao}.\nEu gostaria de:\n${pedido}`;
 }
 function EncaminharMensagem(){
     ConfirmarCompra.style.display= "none";

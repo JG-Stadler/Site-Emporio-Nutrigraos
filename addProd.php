@@ -29,7 +29,7 @@
         $nome_arquivo = $arquivo_foto_produto['name'];
         $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
 
-        if ($extensao != 'jpg' && $extensao != 'png') {
+        if ($extensao != 'jpg' && $extensao != 'png' && $extensao != 'jpeg') {
             die("Tipo de arquivo inválido");
         } else {
             $upload_aprovado = move_uploaded_file($arquivo_foto_produto['tmp_name'], $pasta . $novo_nome_arquivo . '.' . $extensao);

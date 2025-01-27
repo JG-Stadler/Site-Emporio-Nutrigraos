@@ -43,7 +43,7 @@ SelectCategoria.addEventListener("change",()=>{
         if(categoriaSelecionada === "todas"){
             produtos[i].style.display = "";    
         }
-        else if(IdProduto === categoriaSelecionada){
+        else if(IdProduto.toUpperCase() === categoriaSelecionada.toUpperCase()){
             produtos[i].style.display = "";
         }else{
             produtos[i].style.display = "none";

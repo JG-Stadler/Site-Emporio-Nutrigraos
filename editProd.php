@@ -18,14 +18,14 @@ $nova_descri = filter_input(INPUT_POST, 'nova-descri-produto', FILTER_SANITIZE_S
 $nova_categ = filter_input(INPUT_POST, 'nova-categoria-produto', FILTER_SANITIZE_STRING);
 
 $url = null;
-if (isset($_FILES["nova-foto-produto"])) {
+if (isset($_FILES["nova-foto-produto"]) && $_FILES["nova-foto-produto"]["size"] > 0) {
     $arquivo_foto_produto = $_FILES["nova-foto-produto"];
     $pasta = "./Fotos-produtos/";
     $novo_nome_arquivo = uniqid();
     $nome_arquivo = $arquivo_foto_produto['name'];
     $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
 
-    if ($extensao != 'jpg' && $extensao != 'png') {
+    if ($extensao != 'jpg' && $extensao != 'png' && $extensao != 'jpeg') {
         die("Tipo de arquivo inválido");
     } else {
         $url = $pasta . $novo_nome_arquivo . '.' . $extensao;

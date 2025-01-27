@@ -153,7 +153,7 @@ body{
 /* Estilização dos produtos */
 .produtos{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     place-content: center;
     align-items: center;
     justify-items: center;
@@ -168,11 +168,10 @@ body{
     justify-content: space-between;
     text-align: center;
     color: var(--Branco);
-    width: fit-content;
     background-color: var(--Verde);
     border-radius: 20px;
     padding: 20px 15px;
-    width: 250px;
+    width: 300px;
     max-width: 90vw;
     height: 450px;
     font-weight: bolder;
@@ -198,19 +197,9 @@ body{
     max-width: 90%;
 }
 .nome-produto{
-    font-size: x-large;
-    font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+    font-size: larger;
     font-weight: bolder;
     max-width: 100%;
-}
-.descri-produto{
-    font-size: smaller;
-    font-weight: lighter;
-    max-height: 35px;
-    max-width: 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    text-wrap: nowrap;
 }
 .valor{
     font-size: 2.5rem;
@@ -237,8 +226,7 @@ body{
    width: 100vw;
    height: 100vh;
    overflow-y: scroll;
-   background-image: linear-gradient(60deg,var(--Branco),
-   var(--Verde-claro),var(--Verde),var(--Verde-escuro));
+   background-image: linear-gradient(60deg,var(--Verde-claro),var(--Verde),var(--Verde-escuro));
    z-index: 4;
    grid-auto-columns: auto;
    grid-auto-rows: auto;
@@ -276,6 +264,7 @@ body{
     grid-row: 2;
     grid-column: 2;
     font-weight: bolder;
+    font-size: small;
     width: 90%;
     
 }
@@ -483,6 +472,7 @@ body{
 }
 .ST{
     font-size: large;
+    margin-bottom:25px;
 }
 .mensagem-sub-total{
     font-size: smaller;
@@ -499,6 +489,7 @@ body{
     padding: 10px;
     padding-left: 5px;
     border-top: solid 1px var(--Branco);
+    background-color:var(--Verde);
     display: grid;
     grid-auto-columns: auto;
     grid-auto-rows: auto;
@@ -607,11 +598,14 @@ body{
     margin-left: 10px;
 }
 .comfirmar-finalizacao{
+    max-width: 90vw;
     position: fixed;
     top: 50vh;
     left: 50vw;
+    text-align:center;
     transform: translate(-50%,-50%);
-    text-align: center;
+    align-items: center;
+    flex-direction:column;
     background-color: var(--Verde);
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.357);
     border: solid 2px var(--Branco);
@@ -620,7 +614,6 @@ body{
     border-radius:15px 20px;
     font-weight: bolder;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.559);
-    max-width: 90vw;
     display: none;
 }
 .comfirmar-finalizacao button{
@@ -631,4 +624,7 @@ body{
     border-radius: 5px 15px;
     background-color: var(--Verde-escuro);
     border: solid 2px var(--Branco);
+}
+.comfirmar-finalizacao div{
+    gap: 20px;
 }

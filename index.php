@@ -42,7 +42,7 @@
                     <?php
                        include('conection.php');
                        if ($mysqli->connect_error) {
-                            die("Conexão falhou: " . $mysqli->connect_error);
+                            echo 'Erro:' . $mysqli->connect_error;
                         }
                         $sql = "SELECT nome_categ FROM categoria";
                         $result = $mysqli->query($sql);
@@ -90,7 +90,8 @@
                             <!-- <img src="" alt="foto do produto"> -->
                         </div>
                         <h1 class="nome-produto"><?php echo $row['nome']?></h1>
-                        <p class="descri-produto"><?php echo $row['descri']?></p>
+                            <p style="display:none;" class="descri-produto"><?php echo $row['descri']?></p>
+
                         <h2 class="valor">R$<?php echo $row['valor']?></h2>
                     </div>
                 <?php
@@ -139,7 +140,7 @@
         Você ainda não adicionou nenhum produto</p>
         </div>
         <div class="subtotal">
-            <p class="m-0 ST">Sub Total: R$<span id="sub-total-compra">00,00</span></p>
+            <p class="ST">Sub Total: R$<span id="sub-total-compra">00,00</span></p>
             <p class="m-0 mensagem-sub-total">
                 <span>Atenção:</span> O valor mostrado é um subtotal estimado. 
                 O valor final será confirmado durante o atendimento no WhatsApp, 
@@ -158,8 +159,10 @@
             e uma mensagem automatica será
             enviada para um de nossos atendentes.
         </p>
-        <button onclick="FecharJanelaFinalizar()">Não</button>
-        <button onclick="EncaminharMensagem()">Sim</button>
+        <div class="d-flex align-items-center">
+            <button onclick="FecharJanelaFinalizar()">Não</button>
+            <button onclick="EncaminharMensagem()">Sim</button>
+        </div>
     </div>
 
     <div id="quant-itens-carrinho">0</div>
