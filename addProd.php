@@ -24,7 +24,7 @@
     $categ = filter_input(INPUT_POST,"categoria-novo-produto",FILTER_SANITIZE_STRING);
     if (isset($_FILES["foto-novo-produto"])) {
         $arquivo_foto_produto = $_FILES["foto-novo-produto"];
-        $pasta = "./Fotos-produtos/";
+        $pasta = "./fotos-produtos/";
         $novo_nome_arquivo = uniqid();
         $nome_arquivo = $arquivo_foto_produto['name'];
         $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
