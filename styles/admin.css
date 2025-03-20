@@ -31,11 +31,15 @@
     color: var(--Branco);
     text-decoration: none;
 }
-.add-prod,.add-categ{
+.add-prod,.add-categ,.add-adm{
     padding: 5px 10px;
     border: solid 2px var(--Branco);
     background-color: var(--Verde-escuro);
     color: var(--Branco);
+}
+.add-prod:hover,.add-categ:hover,.add-adm:hover,#mostar-categorias:hover{
+    background-color: var(--Verde-claro);
+    color: #ffff;
 }
 /* excluir categorias */
 .controle-de-categorias{
@@ -45,6 +49,10 @@
     background-color: var(--Verde-escuro);
     border: solid 2px var(--Branco);
     color: var(--Branco);
+}
+#mostrar-categorias:hover{
+    background-color: var(--Verde-claro);
+    color: #ffff;
 }
 .vizualizar-categ{
     padding-top: 10px;
@@ -157,7 +165,7 @@
     width: 30px;
 }
 /* Formulários de criação dos produtos e categorias*/
-#novo-produto,#nova-categoria{
+#novo-produto,#nova-categoria,#novo-adm {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -271,4 +279,16 @@
     opacity: 0;
     position: fixed;
     z-index: -3;
+}
+
+/* Adicionar admin */
+
+#novo-adm{
+    width: 300px;
+    max-width: 95vw;
+}
+#novo-adm input{
+    border-radius: 10px;
+    border: none;
+    padding: 5px 0;
 }

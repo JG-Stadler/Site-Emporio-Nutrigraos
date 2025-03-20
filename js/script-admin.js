@@ -2,6 +2,7 @@
 
 const formCriarProduto = document.getElementById("novo-produto");
 const formCriarCategoria = document.getElementById("nova-categoria");
+const formCriarAdm = document.getElementById("novo-adm");
 
 function AbrirFurmularioProd(){
     formCriarProduto.style.display = "flex";
@@ -14,6 +15,12 @@ function AbrirFurmularioCateg(){
 }
 function CloseFormCateg(){
     formCriarCategoria.style.display = "none";
+}
+function AbrirFurmularioADM(){
+    formCriarAdm.style.display = "flex";
+}
+function CloseFormADM(){
+    formCriarAdm.style.display = "none";
 }
 
 // Exclusão de produtos

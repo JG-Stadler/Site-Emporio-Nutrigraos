@@ -31,6 +31,8 @@
     <section class="controles d-flex align-items-center justify-content-around">
         <button class="add-prod btn"
         onclick="AbrirFurmularioProd()">Adicionar produto</button>
+        <button class="add-adm btn"
+        onclick="AbrirFurmularioADM()">Adicionar Adiministrador</button>
         <button class="add-categ btn"
         onclick="AbrirFurmularioCateg()">Adicionar categoria</button>
 
@@ -136,6 +138,16 @@
         <span class="align-self-end" onclick="CloseFormCateg()">X</span>
         <label for="nome-categoria">Nome da categoria</label>
         <input type="text" id="nome-categoria" name="nome-categoria" required>
+        <input type="submit" value="Adicionar" class="add-categ-btn">
+    </form>
+
+    <form method="get" action="../addADM.php" id="novo-adm" class="flex-column">
+        <span class="align-self-end" onclick="CloseFormADM()">X</span>
+        <label for="nome-adm">Nome do novo administrador</label>
+        <input type="text" id="nome-adm" name="nome_adm" required>
+
+        <label for="senha-adm">Senha do novo administrador</label>
+        <input type="password" id="senha-adm" name="senha_adm" required>
         <input type="submit" value="Adicionar" class="add-categ-btn">
     </form>
 
