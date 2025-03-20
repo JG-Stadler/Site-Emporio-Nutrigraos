@@ -22,8 +22,11 @@
         </div>
     </header>
     <section class="boas-vindas">
-        <h1>Olá <?php echo $_SESSION['nome']?></h1>
-        <p class="m-0">Aqui está a listagem de produtos da loja:</p>
+        <div>
+            <h1>Olá <?php echo $_SESSION['nome']?></h1>
+            <p class="m-0">Aqui está a listagem de produtos da loja:</p>
+        </div>
+        <a href="../logout.php" class="logout">Encerrar seção</a>
     </section>
     <section class="controles d-flex align-items-center justify-content-around">
         <button class="add-prod btn"

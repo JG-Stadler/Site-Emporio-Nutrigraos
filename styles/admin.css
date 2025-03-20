@@ -22,6 +22,14 @@
     background-color: var(--Verde-escuro);
     padding: 10px;
     color: var(--Branco);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.logout{
+    color: var(--Branco);
+    text-decoration: none;
 }
 .add-prod,.add-categ{
     padding: 5px 10px;
