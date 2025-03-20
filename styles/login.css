@@ -1,0 +1,37 @@
+body{
+    display: grid;
+    place-content: center;
+    background-color: var(--Verde-claro);
+}
+.login{
+    background-color: var(--Verde);
+    padding: 20px 10px;
+    border-radius: 10px;
+    color: var(--Branco);
+}
+.formulario-de-login{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 20px;
+}
+.formulario-de-login label{
+    font-size: larger;
+}
+.formulario-de-login input{
+    margin: 2px 0 10px 0;
+    width: 100%;
+    font-size: large;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: none;
+}
+.entrar{
+    background-color: var(--Verde-escuro);
+    color: var(--Branco);
+    border: 1px solid var(--Branco) !important;
+    align-self: center;
+    width: 50% !important;
+    padding: 10px 15px !important;
+    cursor: pointer;
+}

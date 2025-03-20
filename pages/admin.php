@@ -1,3 +1,7 @@
+<?php
+    include("../protection.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,7 +22,7 @@
         </div>
     </header>
     <section class="boas-vindas">
-        <h1>Olá administrador</h1>
+        <h1>Olá <?php echo $_SESSION['nome']?></h1>
         <p class="m-0">Aqui está a listagem de produtos da loja:</p>
     </section>
     <section class="controles d-flex align-items-center justify-content-around">
